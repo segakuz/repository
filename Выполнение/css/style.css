@@ -1,0 +1,311 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+
+.block1 {
+	background-image: url('../images/banner.jpg');
+	height: 500px;
+}
+.block2 {
+	background-image: url('../images/pic01.jpg');
+	height: 400px;
+	width: 40%;
+	float: left;
+}
+.block3 {
+	background-image: url('../images/pic02.jpg');
+	height: 400px;
+	width: 60%;
+	float: left;
+}
+.block4 {
+	background-image: url('../images/pic03.jpg');
+	height: 400px;
+	width: 60%;
+	float: left;
+}
+.block5 {
+	background-image: url('../images/pic04.jpg');
+	height: 400px;
+	width: 40%;
+	float: left;
+}
+.block6 {
+	background-image: url('../images/pic05.jpg');
+	height: 400px;
+	width: 40%;
+	float: left;
+}
+.block7 {
+	background-image: url('../images/pic06.jpg');
+	height: 400px;
+	width: 60%;
+	float: left;
+}
+.block8 {
+	background-color: #2a2f4a;
+	height: 400px;
+	width: 100%;
+	clear: both;
+}
+.block9 {
+	background-color: #242943;
+	height: 600px;
+	width: 100%;
+}
+
+
+.content1 {
+	color: #fff;
+	height: 50%;
+	width: 70%;
+	position: relative;
+	left: 15%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content1 p {
+	display: block;
+	width: 40%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+.content1 a {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	padding: 8px 20px;
+	display: block;
+	float: left;
+	margin: 10px 0 0 16px;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content2 {
+	color: #fff;
+	height: 50%;
+	width: 30%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content2 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content3 {
+	color: #fff;
+	height: 50%;
+	width: 20%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content3 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content4 {
+	color: #fff;
+	height: 50%;
+	width: 20%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content4 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content5 {
+	color: #fff;
+	height: 50%;
+	width: 25%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content5 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content6 {
+	color: #fff;
+	height: 50%;
+	width: 30%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content6 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+.content7 {
+	color: #fff;
+	height: 50%;
+	width: 20%;
+	position: relative;
+	left: 10%;
+	top: 35%;
+	font-family: sans-serif;
+}
+.content7 p {
+	display: block;
+	width: 100%;
+	float: left;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+
+
+.content8 {
+	color: #fff;
+	height: 50%;
+	width: 75%;
+	position: relative;
+	left: 10%;
+	top: 25%;
+	font-family: sans-serif;
+	float: left;
+}
+.content8 p {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+	margin: 40px 0 30px 0;
+	clear: both;
+}
+.content8 a {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	padding: 8px 20px;
+	margin: 20px 0 0 0;
+	text-transform: uppercase;
+	font-size: 10pt;
+	font-family: monospace;
+}
+.content8 hr {
+	width: 20%;
+	margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
