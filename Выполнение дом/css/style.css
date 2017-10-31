@@ -9,17 +9,13 @@ body {
 
 .colored-block {
     padding: 50px 0 50px 50px;
-    background: #1e2642;
+    background: rgba(42, 47, 74, 1);
     color: #fff;
 }
 
-.bg {
-	
-}
 
 .bg-aqua {
-	background: url('../images/pic01.jpg');
-    background: rgba(119, 188, 213, 0.5);
+    background: rgba(119, 188, 213, 1);
 }
 .bg-purple {
     background: #7c75b2;
@@ -30,15 +26,26 @@ body {
 .bg-yellow {
     background: #d0a57f;
 }
+.bg-blue {
+	background: #8a9fd5;
+}
+.bg-green {
+	background: #79af96;
+}
+.dark {
+	background: #242943;
+}
 
 
 
+/*Отсюда начинаются стили для лендинга*/
 
-
-
-
-
-
+.bg-lighter {
+	background: #2e3450;
+}
+.bg-lightest {
+	background: #333856;
+}
 
 
 
