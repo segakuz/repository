@@ -7,7 +7,10 @@ body {
     margin: 0;
     font-family: Arial;
 }
-
+h1 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
 .colored-block {
     padding: 50px 50px 50px 50px;
     background: rgba(42, 47, 74, 1);
@@ -74,11 +77,15 @@ float: left;
 
 .menu {
     text-align: right;
+    float: left;
+    width: 20%;
 }
 
 button {
     background: none;
     border: none;
+    color: #fff;
+    font-size: 20px;
 }
 
 .menu-container {
@@ -114,7 +121,9 @@ button {
     transform: translate(-50%, -50%);
 }
 
-
+input {
+    margin: 20px;
+}
 
 
 
