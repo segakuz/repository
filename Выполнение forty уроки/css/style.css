@@ -3,54 +3,64 @@
     /*margin: 0;
     padding: 0;*/
 }
+
 body {
     margin: 0;
     font-family: Arial;
 }
+
 h1 {
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
 }
+
 .colored-block {
     padding: 50px 50px 50px 50px;
     background: rgba(42, 47, 74, 1);
     color: #fff;
 }
+
 .img-block {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .bg-aqua {
     background: rgba(119, 188, 213, 1);
 }
+
 .bg-purple {
     background: #7c75b2;
 }
+
 .bg-orange {
     background: #e49289;
 }
+
 .bg-yellow {
     background: #d0a57f;
 }
+
 .bg-blue {
-	background: #8a9fd5;
+    background: #8a9fd5;
 }
+
 .bg-green {
-	background: #79af96;
+    background: #79af96;
 }
+
 .dark {
-	background: #242943;
+    background: #242943;
 }
 
 p.uppercase {
-	text-transform: uppercase;
-	font-size: 10px;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 img {
-width: 100%;
-float: left;
+    width: 100%;
+    float: left;
 }
 
 .logo {
@@ -62,12 +72,14 @@ float: left;
     float: left;
     /*background: rgba(42, 47, 74, 1);*/
 }
+
 .logo span {
     color: rgba(42, 47, 74, 1);
     background: #fff;
     padding: 3px;
 
 }
+
 .header {
     background: rgba(42, 47, 74, 1);
     padding: 20px;
@@ -98,6 +110,7 @@ button {
     color: #fff;
     display: none;
 }
+
 .menu-container a {
     color: #fff;
     width: 100%;
@@ -109,7 +122,7 @@ button {
 
 .menu-container ul {
     padding-left: 0;
-   /*padding-top: 100px;*/
+    /*padding-top: 100px;*/
     width: 100%;
     max-width: 300px;
     margin: auto;
@@ -149,10 +162,11 @@ input {
 /*Отсюда начинаются стили для лендинга*/
 
 .bg-lighter {
-	background: #2e3450;
+    background: #2e3450;
 }
+
 .bg-lightest {
-	background: #333856;
+    background: #333856;
 }
 
 
@@ -168,24 +182,13 @@ input {
 
 
 
+/*Уроки*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+@media all and (max-width: 800px) {
+    .colored-block {
+        background: red;
+        color: #000;
+    }
+}
+*/
