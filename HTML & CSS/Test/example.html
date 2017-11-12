@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Block</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg {
+            background: url('../site1-3pages/images/cloud.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+            width: 80%;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .bg:after {
+            content: "";
+            background: rgba(150, 17, 58, 0.7);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .bg2 {
+            background: url('../site1-3pages/images/wave.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            width: 80%;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .bg2::after {
+            content: "";
+            background: rgba(5, 208, 36, 0.8);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .bg2:hover::after {
+            background: rgba(255, 245, 0, 0.6);
+        }
+        
+        .bg3 {
+            background: url('../site1-3pages/images/beach.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            width: 80%;
+            margin: auto;
+            position: relative;  
+            filter: hue-rotate(190deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <br>
+    <div class="bg2"></div>
+    <br>
+    <div class="bg3"></div>
+
+</body>
+
+</html>

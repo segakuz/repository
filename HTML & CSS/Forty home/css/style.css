@@ -1,11 +1,12 @@
 /*
 Common
 ________________________________________________________________________________
+*/
 
 * {
     box-sizing: border-box;
-    /*margin: 0;
-    padding: 0;*/
+    /*margin: 0;*/
+    padding: 0;
 }
 
 body {
@@ -258,7 +259,7 @@ ________________________________________________________________________________
 .colored-block.bg-aqua {
     background: rgba(119, 188, 213, 0.9);
     padding: 25% 45% 0 13%;
-    transition: all 1s ease-in-out;
+    transition: background 0.2s ease-in-out 0s;
 }
 
 .colored-block.bg-aqua:hover {
@@ -279,7 +280,7 @@ ________________________________________________________________________________
 .colored-block.bg-purple {
     background: rgba(124, 117, 178, 0.9);
     padding: 18% 63% 0 10%;
-    transition: all 1s ease-in-out;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-purple:hover {
@@ -300,7 +301,7 @@ ________________________________________________________________________________
 .colored-block.bg-orange {
     background: rgba(228, 146, 137, 0.9);
     padding: 18% 63% 0 10%;
-    transition: all 1s ease-in-out;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-orange:hover {
@@ -320,7 +321,7 @@ ________________________________________________________________________________
 .colored-block.bg-yellow {
     background: rgba(208, 165, 127, 0.9);
     padding: 25% 55% 0 13%;
-    transition: all 1s ease-in-out;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-yellow:hover {
@@ -340,7 +341,7 @@ ________________________________________________________________________________
 .colored-block.bg-blue {
     background: rgba(138, 159, 213, 0.9);
     padding: 25% 45% 0 13%;
-    transition: all 1s ease-in-out;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-blue:hover {
@@ -360,7 +361,7 @@ ________________________________________________________________________________
 .colored-block.bg-green {
     background: rgba(121, 175, 150, 0.9);
     padding: 18% 63% 0 10%;
-    transition: all 1s ease-in-out;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-green:hover {
