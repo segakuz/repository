@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt('Введите целое число от -999 до 999', ''), 10);
+
+        var negX1 = ' - Отрицательное число';
+        var negX2 = ' - Отрицательное двузначное число';
+        var negX3 = ' - Отрицательное трехзначное число';
+        var posX1 = ' - Положительное число';
+        var posX2 = ' - Положительное двузначное число';
+        var posX3 = ' - Положительное трехзначное число';
+        var x0 = ' - Нулевое число';
+
+        if (((a >= -999) && (a <= 0)) || ((a >= 0) && (a <= 999))) {
+            if ((a < 0) && (a >= -9)) {
+                alert(a + negX1);
+            } else if ((a <= -10) && (a >= -99)) {
+                alert(a + negX2);
+            } else if ((a <= -100) && (a >= -999)) {
+                alert(a + negX3);
+            } else if ((a > 0) && (a <= 9)) {
+                alert(a + posX1);
+            } else if ((a >= 10) && (a <= 99)) {
+                alert(a + posX2);
+            } else if ((a >= 100) && (a <= 999)) {
+                alert(a + posX3);
+            } else {
+                alert(a + x0);
+            }
+
+        } else {
+            alert('Введите число в диапазоне от -999 до 999');
+        }
+
+    </script>
+</body>
+
+</html>

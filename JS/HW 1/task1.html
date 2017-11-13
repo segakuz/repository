@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt('Ведите первое число', ''), 10);
+        var b = parseInt(prompt('Ведите второе число', ''), 10);
+        var c = parseInt(prompt('Ведите третье число', ''), 10);
+        var num = ' наименьшее число';
+        var nums = ' наименьшие числа';
+
+
+        if (((a <= 0) || (a >= 0)) && ((b <= 0) || (b >= 0)) && ((c <= 0) || (c >= 0))) {
+
+            if ((a < b) && (a < c)) {
+                alert(a + num);
+            } else if ((b < a) && (b < c)) {
+                alert(b + num);
+            } else if ((c < a) && (c < b)) {
+                alert(c + num);
+            } else if ((a == b) && (a != c)) {
+                alert(a + ' и ' + b + nums);
+            } else if ((a == c) && (a != b)) {
+                alert(a + ' и ' + c + nums);
+            } else if ((b == c) && (b != a)) {
+                alert(b + ' и ' + c + nums);
+            } else {
+                alert(a + ' и ' + b + ' и ' + c + ' числа равны');
+            }
+        } else {
+            alert('Введите все три числа');
+        }
+
+    </script>
+</body>
+
+</html>

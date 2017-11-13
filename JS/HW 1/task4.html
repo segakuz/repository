@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+
+</head>
+
+<body>
+    <script>
+        var num = parseInt(prompt('Поставьте оценку от 1 до 5', ''), 10);
+        var val = [
+            ' - плохо',
+            ' - неудовлетворительно',
+            ' - удовлетворительо',
+            ' - хорошо',
+            ' - отлично'
+        ]
+
+        if ((num >= 1) && (num <= 5)) {
+            alert('Ваша оценка: ' + num + val[num - 1]);
+        } else {
+            alert('Вы поставили не ту оценку');
+        }
+
+    </script>
+</body>
+
+</html>

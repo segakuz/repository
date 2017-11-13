@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task3</title>
+
+</head>
+
+<body>
+    <script>
+        var num = parseInt(prompt('Введите целое число от 0 до 9', ''), 10);
+        var val = [
+            ' - ноль',
+            ' - один',
+            ' - два',
+            ' - три',
+            ' - четыре',
+            ' - пять',
+            ' - шесть',
+            ' - семь',
+            ' - восемь',
+            ' - девять'
+        ]
+
+        if ((num >= 0) && (num <= 9)) {
+            alert(num + val[num]);
+        } else {
+            alert('Вы ввели неправильное значение');
+        }
+
+    </script>
+</body>
+
+</html>
