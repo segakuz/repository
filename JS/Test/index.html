@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+    <p class="color-blue font-25">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatem, est ut. Vitae nisi harum saepe at dolorum aperiam vel minima dignissimos, vero rerum rem commodi esse doloribus quam optio excepturi quae porro. Consequuntur quibusdam eveniet veniam dolorum harum! Consequatur esse deleniti provident quas, vero totam eaque reiciendis optio odio.
+    </p>
+
+    <div class="block1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatibus voluptatum, dicta odio, ullam magnam explicabo exercitationem, id temporibus non dolore repudiandae illo necessitatibus iusto ea assumenda est, cupiditate quaerat!
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum saepe, vel iusto enim eos sit tempore laboriosam maxime perferendis ad atque harum qui ipsum possimus hic reprehenderit, facere dicta tempora!
+        </p>
+        <a href="" class="button">Button</a>
+    </div>
+
+    &rarr;
+-->
+
+
+    <script>
+        //        var pay = parseInt(prompt('Ваш оклад: '));
+        //        var days = parseInt(prompt('Введите количество раб дней: '));
+        //        var yourdays = parseInt(prompt('Введите количество отраб дней: '));
+        //        
+        //
+        //        alert ('Вы заработали: ' + parseInt(((pay / days)* yourdays * 0.87)));
+
+
+        //        var lang = prompt('Выберите язык: \nen, \nru, \nge ');
+        //
+        //        switch(lang) {
+        //            case 'en': 
+        //                alert('Hello');
+        //                break;
+        //            case 'ru':
+        //                alert('Даров');
+        //                break;
+        //            case 'ge':
+        //                alert('Rammstein');
+        //                break;
+        //            default:
+        //                alert('Выбери язык');
+        //        }
+
+
+        //        var x = 0;
+        //        var y = 0;
+        //        
+        //        while (x < 100) {
+        //            x++;
+        //            y+=x;
+        //
+        //        }
+        //        console.log(x);
+        //        console.log(y);
+
+
+        var redGreenTb = '<table><tr><th>№</th><th>№*2</th></tr>';
+        var i = 1;
+
+        while (i <= 10) {
+
+            if (i % 2) {
+
+                redGreenTb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+            } else {
+                redGreenTb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+            }
+            i++;
+        }
+
+        redGreenTb += '</table>';
+        document.write(redGreenTb);
+
+    </script>
+
+</body>
+
+</html>

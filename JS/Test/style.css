@@ -1,0 +1,113 @@
+
+
+body {
+    background: #777777;
+
+}
+
+p {
+    color: green;
+    font-size: 25px
+}
+
+
+.color-blue {
+    color: darkblue;
+}
+
+.font-25 {
+    font-size: 25px;
+    
+}
+
+.block1 {
+    background: #333333;
+}
+
+.block1 p {
+    padding-left: 100px;
+    background: #000000;
+    margin: 45px 25px 15px 25px;
+    border: 3px solid orange;
+
+    
+}
+
+.button {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 120px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
