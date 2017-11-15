@@ -35,9 +35,9 @@
 
         //Градусы углов
 
-        var A = ((Math.acos((Math.pow(AC, 2) - Math.pow(AB, 2) + Math.pow(BC, 2)) / (2 * AC * BC))) * 180 / Math.PI).toFixed(2);
-        var B = ((Math.acos((Math.pow(AB, 2) - Math.pow(AC, 2) + Math.pow(BC, 2)) / (2 * AB * BC))) * 180 / Math.PI).toFixed(2);
-        var C = ((Math.acos((Math.pow(AB, 2) - Math.pow(BC, 2) + Math.pow(AC, 2)) / (2 * AB * AC))) * 180 / Math.PI).toFixed(2);
+        var A = +((Math.acos((Math.pow(AC, 2) - Math.pow(AB, 2) + Math.pow(BC, 2)) / (2 * AC * BC))) * 180 / Math.PI).toFixed(2);
+        var B = +((Math.acos((Math.pow(AB, 2) - Math.pow(AC, 2) + Math.pow(BC, 2)) / (2 * AB * BC))) * 180 / Math.PI).toFixed(2);
+        var C = +((Math.acos((Math.pow(AB, 2) - Math.pow(BC, 2) + Math.pow(AC, 2)) / (2 * AB * AC))) * 180 / Math.PI).toFixed(2);
 
         if ((A == 90.00 || B == 90.00 || C == 90.00) && A + B + C == 180.00) {
             alert('Треугольник является прямоугольным. \nГрадусы углов: \nA=' + A + '\nB= ' + B + '\nC= ' + C);
