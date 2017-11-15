@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+
+</head>
+
+<body>
+    <script>
+        //A
+
+        var x1 = parseInt(prompt('Введите координату x1 для точки A', ''), 10);
+        var y1 = parseInt(prompt('Введите координату y1 для точки A', ''), 10);
+        var z1 = parseInt(prompt('Введите координату z1 для точки A', ''), 10);
+
+        //B
+
+        var x2 = parseInt(prompt('Введите координату x2 для точки B', ''), 10);
+        var y2 = parseInt(prompt('Введите координату y2 для точки B', ''), 10);
+        var z2 = parseInt(prompt('Введите координату z2 для точки B', ''), 10);
+
+        //C
+
+        var x3 = parseInt(prompt('Введите координату x3 для точки C', ''), 10);
+        var y3 = parseInt(prompt('Введите координату y3 для точки C', ''), 10);
+        var z3 = parseInt(prompt('Введите координату z3 для точки C', ''), 10);
+
+        //Стороны
+
+        var AB = Math.sqrt((Math.pow((x1 - x2), 2)) + (Math.pow((y1 - y2), 2)) + (Math.pow((z1 - z2), 2)));
+        var BC = Math.sqrt((Math.pow((x2 - x3), 2)) + (Math.pow((y2 - y3), 2)) + (Math.pow((z2 - z3), 2)));
+        var AC = Math.sqrt((Math.pow((x1 - x3), 2)) + (Math.pow((y1 - y3), 2)) + (Math.pow((z1 - z3), 2)));
+
+        //Градусы углов
+
+        var A = ((Math.acos((Math.pow(AC, 2) - Math.pow(AB, 2) + Math.pow(BC, 2)) / (2 * AC * BC))) * 180 / Math.PI).toFixed(2);
+        var B = ((Math.acos((Math.pow(AB, 2) - Math.pow(AC, 2) + Math.pow(BC, 2)) / (2 * AB * BC))) * 180 / Math.PI).toFixed(2);
+        var C = ((Math.acos((Math.pow(AB, 2) - Math.pow(BC, 2) + Math.pow(AC, 2)) / (2 * AB * AC))) * 180 / Math.PI).toFixed(2);
+
+        if (A == 90.00 || B == 90.00 || C == 90.00) {
+            alert('Треугольник является прямоугольным.\nA=' + A + '\nB= ' + B + '\nC= ' + C);
+        } else {
+            alert('Треугольник не является прямоугольным.\nA=' + A + '\nB= ' + B + '\nC= ' + C);
+        }
+
+
+
+        /*
+        console.log('AB ' + AB);
+        console.log('BC ' + BC);
+        console.log('AC ' + AC);
+
+        console.log('AB ' + Math.round(Math.pow(AB, 2)));
+        console.log('BC ' + Math.round(Math.pow(BC, 2)));
+        console.log('AC ' + Math.round(Math.pow(AC, 2)));
+        
+        if ((Math.pow(AB, 2) == Math.pow(BC, 2) + Math.pow(AC, 2)) || (Math.pow(BC, 2) == Math.pow(AB, 2) + Math.pow(AC, 2)) || (Math.pow(AC, 2) == Math.pow(AB, 2) + Math.pow(BC, 2))) {
+            alert('Треугольник является прямоугольным');
+        } else {
+            alert('Треугольник не является прямоугольным');
+        }
+        
+
+        console.log('A ' + A);
+        console.log('B ' + B);
+        console.log('C ' + C);
+        */
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+</head>
+
+<body>
+    <script>
+        var x = parseInt(prompt('Введите первое число', ''), 10);
+        var y = parseInt(prompt('Введите второе число', ''), 10);
+        var z;
+
+        if (isFinite(x) && isFinite(y)) {
+
+            if (y < x) {
+                z = x;
+                x = y;
+                y = z;
+                alert('Числа в порядке возрастания: ' + '\nx = ' + x + '\ny = ' + y);
+
+            } else {
+                alert('Числа в порядке возрастания: ' + '\nx = ' + x + '\ny = ' + y);
+            }
+        } else {
+            alert('Вы не ввели числа');
+        }
+
+    </script>
+</body>
+
+</html>

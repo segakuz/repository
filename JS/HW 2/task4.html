@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+
+</head>
+
+<body>
+    <script>
+
+
+        var num = parseInt(prompt('Введите число меры длины: \n1-дц \n2-км \n3-м \n4-мм \n5-см', ''), 10);
+        var len = parseInt(prompt('Введите длину отрезка в этих единицах', ''), 10);
+
+        switch (num) {
+            case 1:
+                alert('Это: ' + len / 10 + ' м');
+                break;
+            case 2:
+                alert('Это: ' + len * 1000 + ' м');
+                break;
+            case 3:
+                alert('Это: ' + len + ' м');
+                break;
+            case 4:
+                alert('Это: ' + len / 1000 + ' м');
+                break;
+            case 5:
+                alert('Это: ' + len / 100 + ' м');
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
