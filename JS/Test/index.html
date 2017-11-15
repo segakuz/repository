@@ -67,22 +67,42 @@
         //        console.log(y);
 
 
-        var redGreenTb = '<table><tr><th>№</th><th>№*2</th></tr>';
+        //        var redGreenTb = '<table><tr><th>№</th><th>№*2</th></tr>';
+        //        var i = 1;
+        //
+        //        while (i <= 10) {
+        //
+        //            if (i % 2) {
+        //
+        //                redGreenTb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+        //            } else {
+        //                redGreenTb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+        //            }
+        //            i++;
+        //        }
+        //
+        //        redGreenTb += '</table>';
+        //        document.write(redGreenTb);
+        //        
+
+        var tb = '<table>';
         var i = 1;
 
-        while (i <= 10) {
-
-            if (i % 2) {
-
-                redGreenTb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
-            } else {
-                redGreenTb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+        while (i < 10) {
+            
+            tb += '<tr>';
+            var j = 1;
+            while (j < 10) {
+                tb += '<td>' + i * j + '</td>';
+                j++;
             }
+            
             i++;
+            tb += '</tr>';
         }
 
-        redGreenTb += '</table>';
-        document.write(redGreenTb);
+        tb += '</table>';
+        document.write(tb);
 
     </script>
 

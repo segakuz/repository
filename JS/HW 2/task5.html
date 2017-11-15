@@ -9,21 +9,23 @@
 
 <body>
     <script>
+        
+        /*
         var tb = '<table style="border-collapse: collapse;">';
         var i = 1;
-        
+
         function td() {
             tb += '<tr>';
-                    while (j < 10) {
-                        tb += '<td style="padding: 5px; border: 1px solid black;">' + i * j + '</td>';
-                        j++;
-                    }
-                    tb += '</tr>';
+            while (j < 10) {
+                tb += '<td style="padding: 5px; border: 1px solid black;">' + i * j + '</td>';
+                j++;
+            }
+            tb += '</tr>';
         }
-        
+
         while (i < 10) {
             var j = 1;
-            
+
             switch (i) {
                 case 1:
                     td();
@@ -56,8 +58,9 @@
             i++;
         }
 
-
-        
+        tb += '</table>';
+        document.write(tb);
+        */
 
 
         /*
@@ -72,6 +75,24 @@
             i++;
         }
         */
+
+        
+
+        var tb = '<table style="border-collapse: collapse;">';
+        var i = 1;
+
+        while (i < 10) {
+
+            tb += '<tr>';
+            var j = 1;
+            while (j < 10) {
+                tb += '<td style="padding: 5px; border: 1px solid black;">' + i * j + '</td>';
+                j++;
+            }
+
+            i++;
+            tb += '</tr>';
+        }
 
         tb += '</table>';
         document.write(tb);
