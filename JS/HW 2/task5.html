@@ -9,7 +9,33 @@
 
 <body>
     <script>
-        
+        var tb = '<table style="border-collapse: collapse;">';
+        var i = 1;
+
+        while (i < 10) {
+
+            tb += '<tr>';
+            var j = 1;
+            while (j < 10) {
+
+                if (i == j) {
+                    tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center; background: rgba(0, 201, 0, 0.7);">' + i * j + '</td>';
+                } else {
+                    tb += '<td style="padding: 5px; border: 1px solid grey; text-align: center;">' + i * j + '</td>';
+                }
+
+                j++;
+            }
+
+            i++;
+            tb += '</tr>';
+        }
+
+        tb += '</table>';
+        document.write(tb);
+
+
+
         /*
         var tb = '<table style="border-collapse: collapse;">';
         var i = 1;
@@ -61,47 +87,6 @@
         tb += '</table>';
         document.write(tb);
         */
-
-
-        /*
-        while (i <= 10) {
-
-            if (i % 2) {
-
-                tb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
-            } else {
-                tb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
-            }
-            i++;
-        }
-        */
-
-        
-
-        var tb = '<table style="border-collapse: collapse;">';
-        var i = 1;
-
-        while (i < 10) {
-
-            tb += '<tr>';
-            var j = 1;
-            while (j < 10) {
-                
-                if(i == j) {
-                    tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center; background: rgba(0, 201, 0, 0.7);">' + i * j + '</td>';
-                } else {
-                    tb += '<td style="padding: 5px; border: 1px solid grey; text-align: center;">' + i * j + '</td>';
-                }
-                
-                j++;
-            }
-
-            i++;
-            tb += '</tr>';
-        }
-
-        tb += '</table>';
-        document.write(tb);
 
     </script>
 </body>
