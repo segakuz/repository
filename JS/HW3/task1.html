@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+</head>
+
+<body>
+    <script>
+
+        var str = prompt('Введите целое число: ');
+        var nums = str.split("");
+        var sum = 0;
+        var i = 0;
+        
+        while(i < str.length) {
+            sum += +(nums[i]);
+            i++;
+        }
+        
+        alert('Сумма этих чисел по отдельности: ' + sum);    
+            
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task3</title>
+
+</head>
+
+<body>
+    <script>
+
+        var str = prompt('Введите пароль: ');
+        var reg1 = /.{9,}/;
+        var reg2 = /[a-z]+/g;
+        var reg3 = /[A-Z]+/g;
+        var reg4 = /(.*\d){2,}/g;
+        var reg5 = /[\!\$\#\%]/g;
+        
+        //((?=.*\d)|(?=.*\W+)) (?![.\n])
+        
+        if(reg1.test(str)) {
+            if(reg2.test(str) && reg3.test(str)) {
+                if(reg4.test(str)) {
+                   if(reg5.test(str)) {
+                       alert('У вас отличный пароль: ' + str); 
+                   } else {
+                       alert('Ваш пароль не содержит спецсимволов: !, $, #, %');
+                   }
+                } else {
+                    alert('Ваш пароль содержит менее 2 цифр');
+                }
+            } else {
+                alert('Ваш пароль не содержит латинских букв верхнего и нижнего регистра');
+            }
+        } else {
+            alert('Ваш пароль содержит менее 9 символов');
+        }
+        
+
+    </script>
+</body>
+
+</html>

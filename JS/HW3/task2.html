@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+
+</head>
+
+<body>
+    <script>
+        
+        var str = prompt('Введите строку с обязательным содержанием буквы с: ');
+        var lett = str.split('');
+        var i = 0;
+        var final = '';
+
+        while (i < lett.length) {
+            if (lett[i] == 'С' || lett[i] == 'с') {
+                final += lett[i] + lett[i];
+            } else {
+                final += lett[i];
+            }
+            i++;
+        }
+        
+        alert(final);
+
+
+
+    </script>
+</body>
+
+</html>
