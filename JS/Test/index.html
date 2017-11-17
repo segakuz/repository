@@ -30,79 +30,205 @@
 
 
     <script>
-        //        var pay = parseInt(prompt('Ваш оклад: '));
-        //        var days = parseInt(prompt('Введите количество раб дней: '));
-        //        var yourdays = parseInt(prompt('Введите количество отраб дней: '));
-        //        
-        //
-        //        alert ('Вы заработали: ' + parseInt(((pay / days)* yourdays * 0.87)));
+        
+        /*
+        var pay = parseInt(prompt('Ваш оклад: '));
+        var days = parseInt(prompt('Введите количество раб дней: '));
+        var yourdays = parseInt(prompt('Введите количество отраб дней: '));
+        alert ('Вы заработали: ' + parseInt(((pay / days)* yourdays * 0.87)));
+        */
 
 
-        //        var lang = prompt('Выберите язык: \nen, \nru, \nge ');
-        //
-        //        switch(lang) {
-        //            case 'en': 
-        //                alert('Hello');
-        //                break;
-        //            case 'ru':
-        //                alert('Даров');
-        //                break;
-        //            case 'ge':
-        //                alert('Rammstein');
-        //                break;
-        //            default:
-        //                alert('Выбери язык');
-        //        }
+        /*
+        var lang = prompt('Выберите язык: \nen, \nru, \nge ');
+
+        switch(lang) {
+            case 'en': 
+                alert('Hello');
+                break;
+            case 'ru':
+                alert('Даров');
+                break;
+            case 'ge':
+                alert('Rammstein');
+                break;
+            default:
+                alert('Выбери язык');
+        }
+        */
 
 
-        //        var x = 0;
-        //        var y = 0;
-        //        
-        //        while (x < 100) {
-        //            x++;
-        //            y+=x;
-        //
-        //        }
-        //        console.log(x);
-        //        console.log(y);
+
+        /*
+        var x = 0;
+        var y = 0;
+        while (x < 100) {
+            x++;
+            y += x;
+        }
+        console.log(x);
+        console.log(y);
+        */
 
 
-        //        var redGreenTb = '<table><tr><th>№</th><th>№*2</th></tr>';
-        //        var i = 1;
-        //
-        //        while (i <= 10) {
-        //
-        //            if (i % 2) {
-        //
-        //                redGreenTb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
-        //            } else {
-        //                redGreenTb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
-        //            }
-        //            i++;
-        //        }
-        //
-        //        redGreenTb += '</table>';
-        //        document.write(redGreenTb);
-        //        
+        /*
+        var redGreenTb = '<table><tr><th>№</th><th>№*2</th></tr>';
+        var i = 1;
 
+        while (i <= 10) {
+
+            if (i % 2) {
+
+                redGreenTb += '<tr style="background-color:red;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+            } else {
+                redGreenTb += '<tr style="background-color:green;">' + '<td>' + i + '</td><td>' + (i * 2) + '</td>' + '</tr>';
+            }
+            i++;
+        }
+
+        redGreenTb += '</table>';
+        document.write(redGreenTb);
+        */
+        
+        
+        /*
         var tb = '<table>';
         var i = 1;
 
         while (i < 10) {
-            
+
             tb += '<tr>';
             var j = 1;
             while (j < 10) {
                 tb += '<td>' + i * j + '</td>';
                 j++;
             }
-            
+
             i++;
             tb += '</tr>';
         }
 
         tb += '</table>';
         document.write(tb);
+        */
+
+
+        /*
+        var tel = prompt('Введите номер телефона вида 7(900)000-00-00: '); 
+        var reg = /7\(\d{3}\)\d{3}-\d{2}-\d{2}/ig; 
+        alert(reg.test(tel)); //true || false
+        */
+
+
+        /*
+        var email = 'info@ifmo.ru'; 
+        var reg = /[a-z.]+?@[a-z.]+/; // 
+        alert(reg.test(email));
+        */
+
+
+
+        /*
+        var date = '31.12.2017'; 
+        var reg = /[0-3]\d\.[0-1]\d\.[0-2]\d{3}/; 
+        alert(reg.test(date));
+        */
+
+
+        /*
+        var text = prompt('Введите текст: ');
+        var key = prompt('Введите ключ: ');
+        var i = 0;
+        var res = "";
+        var tempCode;
+        while(i < text.length) {
+            tempCode = text.charCodeAt(i)^key.charCodeAt(0);
+            res += String.fromCharCode(tempCode);
+            i++;
+        }
+        alert(res);
+        console.log(res);
+        */
+
+
+
+        var str = 'Привет мир';
+        alert('Строка ' + str);
+        var path = prompt('Введите слово: ');
+        var regT = "";
+        var i = 0;
+        while(i < path.length) {
+            var pathReg = "";
+            var j = 1;
+            while(j < path.length) {
+                if(i==j) {
+                    pathReg += '.';
+                } else {
+                    pathReg += path[j];
+                }
+                j++;
+            }
+            regT += pathReg;
+            if(i != path.length - 1) {
+                regT += "|";
+            }
+            i++;
+        }
+        var regExp = new RegExp(regT, "ig");
+        if(regExp.test(str)) {
+            alert('найдено');
+        } else {
+            alert('не найдено');
+        }
+        console.log('path- ' + path, '\nregT -' + regT);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
     </script>
 
