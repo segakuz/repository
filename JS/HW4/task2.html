@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+</head>
+
+<body>
+    <script>
+        var inp = prompt('Введите 9 раз подряд 0 или 1: ');
+        var area = inp.split('');
+        area.length = 9;
+        var tb = '<table style="border-collapse: collapse;"><tr>';
+
+        function xo() {
+            if (+area[i] === 0) {
+                tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center;">O</td>';
+            } else if (+area[i] === 1) {
+                tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center;">X</td>';
+            } else {
+                tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center;"> </td>';
+            }
+        }
+        console.log(area);
+        
+        for (var i = 0; i < area.length; i++) {
+            if (i == 3 || i == 6) {
+                tb += '</tr><tr>';
+                xo();
+            } else {
+                xo();
+            }
+        }
+        tb += '</tr></table>';
+        document.write(tb);
+        
+    </script>
+</body>
+
+</html>
