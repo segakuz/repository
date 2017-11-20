@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>181117</title>
+</head>
+<body>
+    <script>
+
+        /*--------------------------------------------------------------------------------*/
+        /*
+        var arr = [2,3,7,13,5,0,20];
+        var min = arr[0]; 
+        var max = arr[0]; 
+        var aver = 0;
+                
+        for(var i = 0; i < arr.length; i++) {
+            if(min>arr[i]) 
+                min = arr[i];
+            if(max<arr[i]) 
+                max = arr[i];
+            aver += arr[i]; 
+        }
+         
+        aver = aver/arr.length;
+        console.log('min: ' + min + '\nmax: ' + max + '\naver: ' + aver);
+        
+        arr.shift();
+        arr.pop();
+        console.log(arr);
+        */
+
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /*
+        var arr = [];
+        console.time('Время операций pop/push');
+        
+        for(var i = 0; i < 10000; i++) {
+            arr.push(i);
+        }
+        
+        for(var i = 0; i < 10000; i++) {
+            arr.pop();
+        }
+        
+        console.timeEnd('Время операций pop/push');
+        
+        
+        console.time('Время операций shift/unshift');
+        
+        for(var i = 0; i < 10000000; i++) {
+            arr.shift(i);
+        }
+        
+        for(var i = 0; i < 10000000; i++) {
+            arr.unshift();
+        }
+        
+        console.timeEnd('Время операций shift/unshift');
+        */
+
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /*
+        var arr = [2,3,1,5,7,8,9,0,-1];
+        
+        for(var i=0; i<arr.length; i++) {
+            
+            for(var j=0; j<arr.length-i-1; j++) {
+                if(arr[j] > arr[j+1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+        */
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        
+            
+        var arr = [2,3,1,5,7,8,9,0,-1];
+        
+        for(var i=0; i < arr.length; i++) {
+            
+            var min = i;
+            
+            for(var j=i+1; j < arr.length; j++ ) {
+                if(arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+            var temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        }
+        console.log(arr);
+        
+        /**/
+        /**/
+        /**/
+        /**/
+        /**/
+        /**/
+        /**/
+        /**/
+        
+        
+        
+        
+    </script>
+</body>
+</html>
