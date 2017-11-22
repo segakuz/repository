@@ -4,6 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Task2</title>
+    <style>
+        td {
+            height: 30px;
+            width: 30px;
+            border: 1px solid grey;
+            text-align: center;
+            background: rgba(28, 245, 28, 0.8);
+        }
+    </style>
 </head>
 
 <body>
@@ -11,8 +20,26 @@
         var inp = prompt('Введите 9 раз подряд 0 или 1: ');
         var area = inp.split('');
         area.length = 9;
-        var tb = '<table style="border-collapse: collapse;"><tr>';
+        var tb = '<table><tr>';
 
+        console.log(area);
+
+        for (var i = 0; i < area.length; i++) {
+            if (i === 3 || i === 6) {
+                tb += '</tr><tr>';
+            }
+            if (+area[i] === 0) {
+                tb += '<td>O</td>';
+            } else if (+area[i] === 1) {
+                tb += '<td>X</td>';
+            } else {
+                tb += '<td> </td>';
+            }
+        }
+        tb += '</tr></table>';
+        document.write(tb);
+
+        /*
         function xo(n) {
             if (+area[n] === 0) {
                 tb += '<td style="padding: 10px; border: 1px solid grey; text-align: center;">O</td>';
@@ -34,7 +61,8 @@
         }
         tb += '</tr></table>';
         document.write(tb);
-        
+        */
+
     </script>
 </body>
 
