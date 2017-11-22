@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+</head>
+
+<body>
+    <script>
+
+        var student = {
+            name: 'Иван',
+            surname: 'Иванов',
+            age: 20,
+            studyingPlace: 'ИТМО',
+            interests: [
+                {
+                    name: 'прогулки',
+                    doing: 'гулять пешком в парках'
+                },
+                {
+                    name: 'велосипеды',
+                    doing: 'кататься на велосипеде'
+                },
+                {
+                    name: 'роликовые коньки',
+                    doing: 'кататься на роликовых коньках'
+                }
+            ]
+        };
+        
+        function outPut(obj) {
+            for(var i in obj) {
+                if(typeof obj[i] === 'object' && obj[i].length > 0) {
+                    console.log('Свойство: ' + i + ' содержит массив из ' + obj[i].length + ' элементов');
+                    for(var j=0; j<obj[i].length; j++) {
+                        console.log('Элемент: ' + j + ' содержит следующие свойства: ');
+                        for(var k in obj[i][j]) {
+                            console.log('Свойство: ' + k + ' содержит: ' + obj[i][j][k]);
+                        }
+                    }
+                } else {
+                    console.log("Свойство: " + i + " содержит: " + obj[i]);
+                }
+            }
+        }
+        outPut(student);
+    
+    </script>
+</body>
+
+</html>

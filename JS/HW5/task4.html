@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+
+</head>
+
+<body>
+    <script>
+        var days = prompt('Введите цифру - количество дней');
+        var digit = days.split('');
+        var len = digit.length;
+
+        function end(n) {
+            if (len >= 2 && +digit[len - 2] === 1) {
+                alert('Это: ' + n + ' дней');
+            } else if (n % 10 === 1) {
+                alert('Это: ' + n + ' день');
+            } else if (n % 10 >= 2 && n % 10 <= 4) {
+                alert('Это: ' + n + ' дня');
+            } else {
+                alert('Это: ' + n + ' дней');
+            }
+        }
+        end(days);
+
+    </script>
+</body>
+
+</html>
