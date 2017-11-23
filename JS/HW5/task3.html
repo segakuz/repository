@@ -9,11 +9,11 @@
 
 <body>
     <script>
-        
-        var seq = [1,1];
+                
         var count = +prompt('Введите число - количество чисел Фибоначчи');
         
         function fibo(n) {
+            var seq = [1,1];
             for(var i=2; i<n; i++) {
                 seq.push(seq[i-1] + seq[i-2]);
             }

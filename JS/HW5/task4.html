@@ -10,10 +10,9 @@
 <body>
     <script>
         var days = prompt('Введите цифру - количество дней');
-        var len = days.length;
         
         function end(n) {
-            if (len >= 2 && +days.charAt(len - 2) === 1) {
+            if (n.length >= 2 && +n.charAt(n.length - 2) === 1) {
                 alert('Это: ' + n + ' дней');
             } else if (+n % 10 === 1) {
                 alert('Это: ' + n + ' день');
