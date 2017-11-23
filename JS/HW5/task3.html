@@ -13,13 +13,13 @@
 
         function fibo(n) {
             var seq = [1, 1];
-            if (n < 2) {
-                alert(seq[n]);
-            } else {
+            if(n > 1) {
                 for (var i = 2; i < n; i++) {
                     seq[i] = seq[i - 1] + seq[i - 2];
                 }
                 alert(seq);
+            } else {
+                alert(seq[n-1]);
             }
         }
 
