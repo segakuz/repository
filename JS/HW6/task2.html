@@ -10,6 +10,27 @@
     <script>
         function createNums() {
             var arr = [0];
+            var randnum = Math.floor(Math.random() * (100)) + 1;
+
+            function add() {
+                while (arr.length < 100) {
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i] != randnum) {
+                            arr.push(randnum);
+                            return arr[arr.length - 1];
+                        }
+                    }
+                }
+            }
+            return add();
+        }
+
+        var nums = createNums();
+        console.log(nums);
+
+        /*
+        function createNums() {
+            var arr = [0];
             
             function randnums() {
                 var randnum = Math.floor(Math.random() * (100)) + 1;
@@ -38,7 +59,7 @@
 
         var nums = createNums();
         console.log(nums);
-
+        */
 
     </script>
 </body>
