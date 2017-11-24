@@ -10,8 +10,6 @@
     <script>
         function createNums() {
             var arr = [0];
-            var count = 0;
-            
             
             function randnums() {
                 var randnum = Math.floor(Math.random() * (100)) + 1;
@@ -28,17 +26,15 @@
             }
 
             function add() {
-                if (find()) {
-                    while(count<100) {
+                if (find() === 1) {
+                    while(arr.length<100) {
                         arr.push(randnums());
-                        count++;
                         return arr[arr.length - 1];
                     }
                 }
             }
             return add();
         }
-
 
         var nums = createNums();
         console.log(nums);
