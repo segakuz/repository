@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+
+<body>
+    <script>
+        function createNums() {
+            var arr = [0];
+            var count = 0;
+            
+            
+            function randnums() {
+                var randnum = Math.floor(Math.random() * (100)) + 1;
+                return randnum;
+            }
+
+            function find() {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] === randnums()) {
+                        return 0;
+                    }
+                    return 1;
+                }
+            }
+
+            function add() {
+                if (find()) {
+                    while(count<100) {
+                        arr.push(randnums());
+                        count++;
+                        return arr[arr.length - 1];
+                    }
+                }
+            }
+            return add();
+        }
+
+
+        var nums = createNums();
+        console.log(nums);
+
+
+    </script>
+</body>
+
+</html>

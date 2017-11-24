@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+
+<body>
+    <script>
+        
+        var num = +prompt('Факториал какого числа вычисляем?');
+        
+        function fact(n) {
+            if (n) {
+                return n * fact(n - 1);
+            } else {
+                return 1;
+            }
+        }
+        alert(fact(num));
+        
+    </script>
+</body>
+
+</html>
