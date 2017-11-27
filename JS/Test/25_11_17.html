@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>25.11.2017</title>
+</head>
+
+<body>
+    <script src="25_11_17.js"></script>
+    <script type="text/javascript" src="plotly-latest.min.js"></script>
+    <div id="placeholder" style="width: 480px; height: 400px;"></div>
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1 
+        function create() {
+            var birthDayF = new Date();
+            
+            return function() {
+                return birthDayF;
+            }
+        }
+        var newFunction = create();
+        consol.log(newFunction());
+        var newFunction2 = create();
+        consol.log(newFunction2());
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2 
+        var cat = {
+            name: 'Motya',
+            age: 7,
+            mew: function() {
+                console.log('My name is ' + this.name);
+            }
+        }
+        cat.mew();
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 3 
+        var animal = {
+            name: '',
+            age: -1,
+            keyword: ''
+        }
+        function logHello() {
+            console.log(this.keyword + 'My name is ' + this.name);
+        }
+        animal.name = 'Motya';
+        animal.age = 1;
+        animal.keyword = 'Meow!';
+        animal.hello = logHello;
+        logHello();
+        animal.hello();
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 4 
+        var arr = [1,2,3];
+        myFirstLib.remove(arr, 1);
+        console.log(arr);
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 5 
+        var str = 'motya poo ';
+        console.log(myFirstLib.repeat(str, 3));
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 6 
+        var arrObj = [
+            {age:18, sex: 'male'},
+            {age:19, sex: 'female'},
+            {age:20, sex: 'male'},
+            {age:22, sex: 'female'}
+        ];
+        var arrTemp = myFirstLib.pluck(arrObj, 'age');
+        console.log(arrTemp);
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 7 
+        function f(x) {
+            if (x < 0) {
+                return 2 * x + 1;
+            } else if (x < 2 && x >= 0) {
+                return (-1.5) * x + 1;
+            } else {
+                return x - 4;
+            }
+        }
+
+        var line1 = {
+            x: [],
+            y: [],
+            type: 'scatter'
+        };
+        var x;
+        for (var i = -500; i <= 500; i++) {
+            x = i/100;
+            line1.x.push(x);
+            line1.y.push(f(x));
+        }
+        var data = [line1];
+        Plotly.newPlot('placeholder', data);
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 8 */
+        
+        /*--------------------------------------------------------------------------------*/
+        /* 9*/
+        
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+
+    </script>
+</body>
+
+</html>

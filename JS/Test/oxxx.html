@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="myFunction()">Генерировать!</button>
+
+<p id="demo"></p>
+
+<script>
+var generNum = (function () {
+    var hundred = [];
+    var added = false;
+    return function () {
+        added = false;
+        if (hundred.length === 100) {
+            return "Все 100 чисел уже сгенерированы.";
+        } else {
+            while (added === false) {
+                num = Math.floor(Math.random() * 100) + 1;
+                if (hundred.indexOf(num) === -1) {
+                    hundred.push(num);
+                    added = true;
+                    return num;
+                };
+            };
+        };
+    };
+})();
+function myFunction(){
+    document.getElementById("demo").innerHTML += generNum() + "</br>";
+}
+</script>
+
+</body>
+</html>
