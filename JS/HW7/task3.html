@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task3</title>
+    <link rel="shortcut icon" type="image/png" href="Jasmine/lib/jasmine-2.6.2/jasmine_favicon.png">
+    <link rel="stylesheet" href="Jasmine/lib/jasmine-2.6.2/jasmine.css">
+
+    <script src="Jasmine/lib/jasmine-2.6.2/jasmine.js"></script>
+    <script src="Jasmine/lib/jasmine-2.6.2/jasmine-html.js"></script>
+    <script src="Jasmine/lib/jasmine-2.6.2/boot.js"></script>
+</head>
+
+<body>
+    <script>
+        
+        function f(x) {
+            var y = (Math.round((1/x)*100)/100) + (Math.round((Math.sqrt(x))*100)/100);
+            return y;
+        }
+
+        describe("Высчитываем значение y", function() {
+            var x = '1';
+            var result = 2;
+            var msg = "Вывести значение y при x = " + x + " результат 2";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).toBe(2);
+            });
+        });
+        
+        describe("Высчитываем значение y", function() {
+            var x = '2';
+            var result = 1.91;
+            var msg = "Вывести значение y при x = " + x + " результат 1.91";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).toBe(1.91);
+            });
+        });
+        
+        describe("Высчитываем значение y", function() {
+            var x = '3';
+            var result = 2.06;
+            var msg = "Вывести значение y при x = " + x + " результат 2.06";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).toBe(2.06);
+            });
+        });
+        
+        describe("Высчитываем значение y", function() {
+            var x = '4';
+            var result = 2.25;
+            var msg = "Вывести значение y при x = " + x + " результат 2.25";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).toBe(2.25);
+            });
+        });
+        
+        describe("Высчитываем значение y", function() {
+            var x = '4';
+            var result = 2.25;
+            var msg = "Вывести значение y при x = " + x + " результат не должен быть 2";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).not.toBe(2);
+            });
+        });
+        
+        describe("Высчитываем значение y", function() {
+            var x = '4';
+            var result = 2.25;
+            var msg = "Вывести значение y при x = " + x + " результат должен быть больше 2";
+            it(msg, function() {
+                var rez = f(x);
+                expect(rez).toBeTruthy(result>2);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

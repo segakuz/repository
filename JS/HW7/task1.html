@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            name: 'Иван',
+            surname: 'Петров',
+            age: 21,
+            studyingPlace: 'ИТМО',
+            interests: ['прогулки', 'велосипеды', 'программирование'],
+            about: function() {
+                console.log('Привет! Меня зовут ' + this.name + ' ' + this.surname + '. \nМне ' + this.age + ' год. \nМои интересы: ' + this.interests + '.');
+            }
+        };
+        student.about();
+
+    </script>
+</body>
+
+</html>

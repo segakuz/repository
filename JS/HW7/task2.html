@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+    <script src="plotly-latest.min.js"></script>
+    <div id="placeholder" style="width: 480px; height: 400px;"></div>
+    <script>
+    
+    function f(x) {
+            if (x < 1) {
+                return x*x-4*x;
+            } else {
+                return 5/x;
+            }
+        }
+
+        var line1 = {
+            x: [],
+            y: [],
+            type: 'scatter'
+        };
+        var x;
+        for (var i = -500; i <= 500; i++) {
+            x = i/100;
+            line1.x.push(x);
+            line1.y.push(f(x));
+        }
+        var data = [line1];
+        Plotly.newPlot('placeholder', data);
+    
+    </script>
+</body>
+</html>

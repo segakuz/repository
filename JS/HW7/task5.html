@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+</head>
+
+<body>
+    <script>
+        var alph = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'];
+        var alphUpp = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'];
+
+        var str = prompt('Введите строку ');
+        var x = +prompt('Введите сдвиг:\nположительное число - вправо \nотрицательное число - влево ');
+        var resStr = '';
+
+        for (i = 0; i < str.length; i++) {
+            if (alphUpp.indexOf(str[i]) !== -1) {
+                if ((alphUpp.indexOf(str[i]) + x) >= alphUpp.length - 1) {
+                    resStr += alphUpp[alphUpp.indexOf(str[i]) + x - alphUpp.length];
+                } else if ((alphUpp.indexOf(str[i]) + x) < 0) {
+                    resStr += alphUpp[alphUpp.indexOf(str[i]) + x + alphUpp.length];
+                } else {
+                    resStr += alphUpp[alphUpp.indexOf(str[i]) + x];
+                }
+            } else if ((alph.indexOf(str[i]) !== -1)) {
+                if ((alph.indexOf(str[i]) + x) >= alph.length - 1) {
+                    resStr += alph[alph.indexOf(str[i]) + x - alph.length];
+                } else if ((alph.indexOf(str[i]) + x) < 0) {
+                    resStr += alph[alph.indexOf(str[i]) + x + alph.length];
+                } else {
+                    resStr += alph[alph.indexOf(str[i]) + x];
+                }
+            } else {
+                resStr += str[i];
+            }
+        }
+
+        console.log(resStr);
+        console.log('исходная строка ' + str);
+
+    </script>
+</body>
+
+</html>

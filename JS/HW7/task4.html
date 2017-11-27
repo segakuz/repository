@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task4</title>
+</head>
+<body>
+    <script>
+    
+    ;
+(function() {
+    window.mySecLib = {
+        min: function(arr) {
+            return Math.min(...arr);
+        },
+        max: function(arr) {
+            return Math.max(...arr);
+        },
+        average: function(arr) {
+            var sum = 0;
+            for(var i=0; i<arr.length; i++) {
+                sum += arr[i];
+            }
+            return Math.round((sum/arr.length)*1000)/1000;
+        },
+        clone: function(arr) {
+            return arr.slice(0);
+        }
+    }
+}())
+    
+    </script>
+    
+    <script>
+        // для min и max  
+        var arr = [888,4,395,10,222,11,99];
+        console.log(mySecLib.min(arr));
+        console.log(mySecLib.max(arr));
+        
+        //для average
+        var arr1 = [1,2,3,4,5,6,7,8,9,10];
+        console.log(mySecLib.average(arr));
+        console.log(mySecLib.average(arr1));
+        
+        //для clone
+        var clArr = mySecLib.clone(arr);
+        console.log(clArr);
+
+    </script>
+</body>
+</html>
