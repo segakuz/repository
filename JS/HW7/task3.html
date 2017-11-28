@@ -27,13 +27,13 @@
                 var rez = f(x);
                 expect(rez).toBe(2.25);
             });
-            var msg = "Вывести значение y при x = " + x + " результат не должен быть 2";
-            it(msg, function() {
+            var msg2 = "Вывести значение y при x = " + x + " результат не должен быть 2";
+            it(msg2, function() {
                 var rez = f(x);
                 expect(rez).not.toBe(2);
             });
-            var msg = "Вывести значение y при x = " + x + " результат должен быть больше 2";
-            it(msg, function() {
+            var msg3 = "Вывести значение y при x = " + x + " результат должен быть больше 2";
+            it(msg3, function() {
                 var rez = f(x);
                 expect(rez).toBeTruthy(result > 2);
             });
