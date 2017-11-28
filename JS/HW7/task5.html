@@ -17,7 +17,7 @@
 
         for (i = 0; i < str.length; i++) {
             if (alphUpp.indexOf(str[i]) !== -1) {
-                if ((alphUpp.indexOf(str[i]) + x) >= alphUpp.length - 1) {
+                if ((alphUpp.indexOf(str[i]) + x) > alphUpp.length - 1) {
                     resStr += alphUpp[alphUpp.indexOf(str[i]) + x - alphUpp.length];
                 } else if ((alphUpp.indexOf(str[i]) + x) < 0) {
                     resStr += alphUpp[alphUpp.indexOf(str[i]) + x + alphUpp.length];
@@ -25,7 +25,7 @@
                     resStr += alphUpp[alphUpp.indexOf(str[i]) + x];
                 }
             } else if ((alph.indexOf(str[i]) !== -1)) {
-                if ((alph.indexOf(str[i]) + x) >= alph.length - 1) {
+                if ((alph.indexOf(str[i]) + x) > alph.length - 1) {
                     resStr += alph[alph.indexOf(str[i]) + x - alph.length];
                 } else if ((alph.indexOf(str[i]) + x) < 0) {
                     resStr += alph[alph.indexOf(str[i]) + x + alph.length];
