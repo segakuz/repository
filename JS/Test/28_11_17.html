@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>28.11.2017</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        td {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            text-align: center;
+            color: #252c2c;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul id="cont"></ul>
+    <table id="gamePlace"></table>
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1
+        var ul = document.getElementById('cont');
+        var body = document.getElementsByTagName('body')[0];
+        var li = document.createElement('li');
+        li.innerHTML = '123';
+        
+        for (var i = 0; i < 3; i++) {
+            var li = document.createElement('li');
+            li.innerHTML = '123';
+            ul.appendChild(li);
+        }
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2*/
+        // ввести число, вывести таблицу число на число ячеек, в каждой ячейке рандомная неповторяющаяся цифра, рандомного цвета и размера
+        ;
+        (function() {
+            function getRandNumInInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            function getRandNum(arr) {
+                var index = getRandNumInInt(0, arr.length - 1);
+                return arr.splice(index, 1);
+            }
+            
+            function getRandStyle() {
+                return 'background: rgb(' + getRandNumInInt(0, 255) + ', ' + getRandNumInInt(0, 255) + ', ' + getRandNumInInt(0, 255) + ');' + 'font-size: ' + getRandNumInInt(20, 80) + 'px;';
+            }
+            
+            window.gameLib = {
+                createGamePlace: function(n, strIdTable) {
+                    var arrNum = [];
+                    for (var i = 1; i <= n * n; i++) {
+                        arrNum.push(i);
+                    }
+                    var tb = document.getElementById(strIdTable);
+                    
+                    for(var i=0; i<n; i++) {
+                        var tr = document.createElement('tr');
+                        for(var j=0; j<n; j++) {
+                            var td = document.createElement('td');
+                            td.innerText = getRandNum(arrNum);
+                            td.style = getRandStyle();
+                            tr.appendChild(td);
+                        }
+                        tb.appendChild(tr);
+                    }  
+                }
+            };
+        }());
+
+        gameLib.createGamePlace(5, 'gamePlace');
+
+        /*--------------------------------------------------------------------------------*/
+        /* 3*/
+        /*--------------------------------------------------------------------------------*/
+        /* 4*/
+        /*--------------------------------------------------------------------------------*/
+        /* 5*/
+        /*--------------------------------------------------------------------------------*/
+        /* 6*/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+        /*--------------------------------------------------------------------------------*/
+        /**/
+
+    </script>
+</body>
+
+</html>
