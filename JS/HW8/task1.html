@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta http-equiv="Refresh" content="1">-->
+    <title>task1</title>
+    <style>
+        span {
+            font-size: 100px;
+            color: #7b7b7b;
+        }
+
+    </style>
+</head>
+
+<body>
+    <span id='hours'></span>
+    <span>:</span>
+    <span id='minutes'></span>
+    <span>:</span>
+    <span id='seconds'></span>
+
+    <script>
+        var hours = document.getElementById('hours');
+        var minutes = document.getElementById('minutes');
+        var seconds = document.getElementById('seconds');
+
+        function getRand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function getRandStyle() {
+            return 'background: rgb(' + getRand(0, 255) + ', ' + getRand(0, 255) + ', ' + getRand(0, 255) + ');';
+        }
+
+        function timeOP() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            hours.innerHTML = (h < 10) ? '0' + h : h;
+            hours.style = getRandStyle();
+            minutes.innerHTML = (m < 10) ? '0' + m : m;
+            minutes.style = getRandStyle();
+            seconds.innerHTML = (s < 10) ? '0' + s : s;
+            seconds.style = getRandStyle();
+        }
+        timeOP();
+        setInterval(function() {
+            location.reload()
+        }, 1000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+
+<body>
+
+    <div id='one'></div>
+
+    <script>
+        var product = {
+            name: 'A cardboard box',
+            photo: 'prod.jpg',
+            number: 123,
+            description: 'An excellent paper box with a big red question',
+
+            output: function() {
+                var div = document.getElementById('one');
+                var img = document.createElement('img');
+                img.setAttribute('src', this.photo);
+                img.setAttribute('alt', this.description);
+                img.style.height = '400px';
+
+                var p = document.createElement('p');
+                p.innerHTML = 'num:' + this.number;
+                p.style.color = '#000000';
+                p.style.fontSize = '15px';
+
+                var p2 = document.createElement('p');
+                p2.innerHTML = this.description;
+                p2.style.color = '#4a1111';
+                p2.style.fontSize = '20px';
+
+                var h2 = document.createElement('h2');
+                h2.innerHTML = this.name;
+                h2.style.color = 'grey';
+
+                div.appendChild(img);
+                div.appendChild(h2);
+                div.appendChild(p);
+                div.appendChild(p2);
+            }
+        };
+        product.output();
+
+    </script>
+</body>
+
+</html>
