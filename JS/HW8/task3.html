@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta http-equiv="Refresh" content="2">-->
+    <title>task3</title>
+    <style>
+        #trlight {
+            background: #36455a;
+            margin: 100px;
+            padding: 0;
+            height: 150px;
+            width: 50px;
+
+        }
+
+        #red,
+        #ylw,
+        #grn {
+            border-radius: 50%;
+            background: grey;
+            height: 50px;
+            width: 50px;
+        }
+
+
+        #red.on {
+            background: #ff0000;
+        }
+
+        #ylw.on {
+            background: #f5ff00;
+        }
+
+        #grn.on {
+            background: #00ff00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='trlight'>
+        <div id='red' class=''></div>
+        <div id='ylw' class=''></div>
+        <div id='grn' class='on'></div>
+    </div>
+
+    <script>
+        var red = document.getElementById('red');
+        var ylw = document.getElementById('ylw');
+        var grn = document.getElementById('grn');
+        var i = 1;
+
+        function light() {
+
+                if (i === 1) {
+                    ylw.classList.toggle('on');
+                    grn.classList.toggle('on');
+                    i++;
+                } else if (i === 2) {
+                    red.classList.toggle('on');
+                    ylw.classList.toggle('on');
+                    i++;
+                } else if (i === 3) {
+                    ylw.classList.toggle('on');
+                    i++;
+                } else {
+                    ylw.classList.toggle('on');
+                    grn.classList.toggle('on');
+                    red.classList.toggle('on');
+                    i = 1;
+                }
+            }
+        
+        setInterval(light, 2000);
+
+    </script>
+</body>
+
+</html>

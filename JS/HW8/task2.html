@@ -17,8 +17,8 @@
             number: 123,
             description: 'An excellent paper box with a big red question',
 
-            output: function() {
-                var div = document.getElementById('one');
+            output: function(id) {
+                var div = document.getElementById(id);
                 var img = document.createElement('img');
                 img.setAttribute('src', this.photo);
                 img.setAttribute('alt', this.description);
@@ -44,7 +44,7 @@
                 div.appendChild(p2);
             }
         };
-        product.output();
+        product.output('one');
 
     </script>
 </body>
