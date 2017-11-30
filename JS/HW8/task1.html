@@ -46,10 +46,8 @@
             seconds.innerHTML = (s < 10) ? '0' + s : s;
             seconds.style = getRandStyle();
         }
-        timeOP();
-        setInterval(function() {
-            location.reload()
-        }, 1000);
+
+        setInterval(timeOP, 1000);
 
     </script>
 </body>
