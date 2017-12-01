@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>30.11.2017</title>
+    <!-- calc
+    <style>
+        body {
+            background: #a0a0a0;
+        }
+        td {
+            height: 100px;
+            width: 100px;
+            border: 1px dotted black;
+            text-align: center;
+            font-size: 50px;
+            background: rgba(134, 212, 253, 0.62);
+        }
+        input {
+            height: 80px;
+            width: 450px;
+            background: rgba(134, 212, 253, 0.62);
+            font-size: 50px;
+            color: black;
+        }
+    </style>
+-->
+
+    <style>
+        #mother {
+            height: 600px;
+            width: 600px;
+            background: rgba(55, 255, 247, 0.58);
+            position: relative;
+        }
+        #hero {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: red;
+            
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <div id="mother">
+        <div id="hero" style="top: 0px; left: 0px;"></div>
+    </div>
+    
+
+
+    <!-- chat
+    <input type="text" id="text">
+    <button id="send">Send</button>
+    <ul id="wall">
+    </ul>
+-->
+
+    <!-- calc
+    <table id="calculator">
+        <thead>
+            <input type="text" disabled id="resOutput">
+
+        </thead>
+        <tr>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>.</td>
+            <td>=</td>
+            <td>+</td>
+        </tr>
+    </table>
+-->
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1 calc
+        var arrTd = document.getElementsByTagName('td'); //querySelectorAll('td'); по CSS
+        for(var i=0; i<arrTd.length; i++) {
+            arrTd[i].addEventListener('click', myHandler, false);
+        }
+        function myHandler(objEvent) { //objEvent, e = event
+            if(this.innerText === 'C') {
+                resOutput.value = ''; //value есть у input
+            } else if(this.innerText === '=') {
+                resOutput.value = eval(resOutput.value);
+            } else {
+                resOutput.value += this.innerText;
+            }
+        }
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2 calc2
+        calculator.addEventListener('click', myHandler, false);
+        function myHandler(objE) { //objEvent, e = event
+            if (objE.target.tagName === 'TD') { //название тега с большой буквы
+                if (objE.target.innerText === 'C') {
+                    resOutput.value = ''; //value есть у input
+                } else if (objE.target.innerText === '=') {
+                    resOutput.value = eval(resOutput.value);
+                } else {
+                    resOutput.value += objE.target.innerText;
+                }
+            }
+        }
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 3 chat
+        send.onclick = function() {
+            var elLi = document.createElement('li');
+            elLi.innerHTML = text.value; //innerText - просто текст
+            wall.appendChild(elLi);
+            text.value = '';
+        };
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 4 красный квадратик
+        document.onkeydown = function(e) {
+            if(e.keyCode === 38) {
+                hero.style.top = (parseInt(hero.style.top) - 150) + 'px';
+            } else if (e.keyCode === 40) {
+                hero.style.top = (parseInt(hero.style.top) + 150) + 'px';
+            } else if (e.keyCode === 39) {
+                hero.style.left = (parseInt(hero.style.left) + 150) + 'px';
+            } else if (e.keyCode === 37) {
+                hero.style.left = (parseInt(hero.style.left) - 150) + 'px';
+            } 
+        };
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 5*/
+        /*--------------------------------------------------------------------------------*/
+        /* 6*/
+        /*--------------------------------------------------------------------------------*/
+        /* 7*/
+        /*--------------------------------------------------------------------------------*/
+        /* 8*/
+        /*--------------------------------------------------------------------------------*/
+        /* 9*/
+        /*--------------------------------------------------------------------------------*/
+        /* 10*/
+
+    </script>
+</body>
+
+</html>
