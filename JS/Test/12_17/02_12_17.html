@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02.12.2017</title>
+</head>
+
+<body>
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1
+        function Iterator(left, right) {
+            this._left = left; //_ это специально, типа не трогать!
+            this._right = right;
+            var curr = left;
+
+            this.nextStep = function() {
+                if (curr !== right) {
+                    return curr++;
+                } else {
+                    return curr;
+                }
+            }
+        }
+        
+        var iter = new Iterator(10, 20);
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        var iter2 = new Iterator(0, 20);
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2 это снова первая задача, в обе стороны
+        function Iterator(left, right) {
+            this._left = left;  //_ это специально, типа не трогать!
+            this._right = right;
+            var curr = left;
+
+            this.nextStep = function() {
+                if (this._left < this._right && curr !== this._right) {
+                    return curr++;
+                } else if (this._left > this._right && curr !== this._right) {
+                    return curr--;
+                } else {
+                    return curr;
+                }
+            }
+        }
+        var iter = new Iterator(20, 10);
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        console.log(iter.nextStep());
+        
+        var iter2 = new Iterator(10, 20);
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        console.log(iter2.nextStep());
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 3 работает в обе стороны
+        function Iterator(left, right) {
+            this._left = left; //_ это специально, типа не трогать!
+            this._right = right;
+            var curr = left;
+
+            this.nextStep = function() {
+                if (this._left < this._right && curr !== this._right) {
+                    return curr++;
+                } else if (this._left > this._right && curr !== this._right) {
+                    return curr--;
+                } else {
+                    return his.curr;
+                }
+            }
+            this.getCurr = function() {
+                return curr;
+            }
+        }
+
+        function IteratorSE(left, right) {
+            Iterator.call(this, left, right);
+            this.nextDual = function() {
+                var curr = this.getCurr();
+                if(curr === this._right) {
+                    var temp = this._left;
+                    this._left = this._right;
+                    this._right = temp;
+                }
+                return this.nextStep();
+            }
+        }
+        
+        var iter = new IteratorSE(10, 13);
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        console.log(iter.nextDual());
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 4
+        function User(name) {
+            if(name === undefined) {
+                this.name = 'Anonim';
+            } else {
+                this.name = name;
+            }
+            this.toString = function() {
+                return 'It is our lovely user ' + this.name;
+            }
+        }
+        
+        var user1 = new User();
+        var user2 = new User('Sergei');
+        alert(user1);
+        alert(user2);
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 5 fabric method
+        function User() {
+            this.name = 'Nobody';
+            this.toString = function() {
+                return 'It is our lovely user ' + this.name;
+            } //.bind(this);
+        };
+        User.anon = function() {
+            var user = new User();
+            user.name = 'Anonim';
+            return user;
+        };
+        User.person = function(name) {
+            var user = new User();
+            user.name = name;
+            return user;
+        };
+        
+        var user1 = User.anon();
+        var user2 = User.person('Sergei');
+        alert(user1);
+        alert(user2);
+        
+        var myFunc = user2.toString;
+        alert(myFunc.call({name:'Haha'}));
+        alert(myFunc());
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 6
+        function User() {
+            this.name = 'Nobody';
+            var self = this;
+            this.toString = function() {
+                return 'It is our lovely user ' + self.name;
+            }
+        };
+        */
+    </script>
+
+</body>
+
+</html>
