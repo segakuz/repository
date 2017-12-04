@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+
+<body>
+    <button id="btn" style="width:50px;">Count</button>
+    <script>
+        btn.onclick = count();
+        function count() {
+            var i = 1;
+            return function() {
+                btn.innerText = i++;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+    <style>
+        #container {
+            display: flex;
+        }
+
+        div {
+            height: 100px;
+            width: 200px;
+            background: green;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+
+
+    <script>
+        container.addEventListener('click', change, false);
+
+        function change(e) {
+            if (e.target.tagName === 'DIV') {
+                if (e.target.style.background === 'red') {
+                    e.target.style.background = 'green';
+
+                } else {
+                    e.target.style.background = 'red';
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
