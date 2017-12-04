@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>keyboard</title>
+    <style>
+        main {
+            margin: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+            color: #223a5e;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            width: 7%;
+            font-size: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: block;
+            border: none;
+            color: #223a5e;
+        }
+        #back-space {
+            background-color: #f2f3f2;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input value="  " readonly="readonly" />
+        <table>
+            <tr>
+                <td>`</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>0</td>
+                <td>-</td>
+                <td>=</td>
+            </tr>
+            <tr>
+                <td>q</td>
+                <td>w</td>
+                <td>e</td>
+                <td>r</td>
+                <td>t</td>
+                <td>y</td>
+                <td>u</td>
+                <td>i</td>
+                <td>o</td>
+                <td>p</td>
+                <td>[</td>
+                <td>]</td>
+                <td>\</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>s</td>
+                <td>d</td>
+                <td>f</td>
+                <td>g</td>
+                <td>h</td>
+                <td>j</td>
+                <td>k</td>
+                <td>l</td>
+                <td>;</td>
+                <td>'</td>
+            </tr>
+            <tr>
+                <td>z</td>
+                <td>x</td>
+                <td>c</td>
+                <td>v</td>
+                <td>b</td>
+                <td>n</td>
+                <td>m</td>
+                <td>,</td>
+                <td>.</td>
+                <td>/</td>
+                <td colspan="2"> </td>
+                <td id="back-space" onclick="backSpace()">&xlarr;</td>
+            </tr>
+        </table>
+    </main>
+    <script>
+        var letters = document.getElementsByTagName("td");
+        var word = document.getElementsByTagName("input")[0];
+
+        function addLetter(td) {
+            word.value += td.innerHTML;
+            for (j = 0; j < letters.length - 1; j++) {
+                letters[j].style.backgroundColor = "white";
+                letters[j].style.color = "#223a5e";
+            };
+            td.style.backgroundColor = "#223a5e";
+            td.style.color = "white";
+        }
+
+        function backSpace() {
+            var short = word.value.slice(0, word.value.length - 1);
+            word.value = short;
+
+        }
+        for (i = 0; i < letters.length - 1; i++) {
+            letters[i].addEventListener("click", function() {
+                addLetter(this);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
