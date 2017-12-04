@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+
+<body>
+    <script>
+        function Human(name, age, gender, interests) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            
+            this.toString = function() {
+                return 'Человек: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + gender + '. Интересы: ' + this.interests + '.';
+            }
+        }
+        
+        function Student(name, age, gender, interests, inst) {
+            Human.call(this, name, age, gender, interests);
+            this.inst = inst;
+            this.toString = function() {
+                return 'Студент: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + gender + '. Интересы: ' + this.interests + '. Обучается в: ' + this.inst + '.';
+            }
+        }
+        
+        var hum1 = new Human('Василий', 29, 'м', 'плавание, музыка');
+        var stud1 = new Student('Василий', 29, 'м', 'музыка, программирование', 'ИТМО');
+        
+        console.log(hum1.toString());
+        console.log(stud1.toString());
+
+    </script>
+</body>
+
+</html>
