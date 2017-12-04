@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>task1</title>
 </head>
+
 <body>
     <script>
-    
-    function Product(name, price) {
-        this.name = name;
-        this.price = price;
-    }
-        
-    function Basket() {
-        var products = [];
-        var quantity;
-        var amount = 0;
-        this.addProduct = function(obj) {
-            products[products.length] = obj.name;
-            quantity = products.length;
-            amount += +obj.price;
-        };
-        this.quantity = function () {
-            return 'Количество товара: ' + quantity + ' шт.';
-        };
-        this.amount = function() {
-            return 'Сумма покупок: ' + amount + ' руб.';
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
         }
-    }
-        
-    var good1 = new Product('first', 9000);
-    var good2 = new Product('second', 8700); 
-    var good3 = new Product('third', 12300); 
-        
-    var basket = new Basket(); 
-        
-    basket.addProduct(good1);
-    basket.addProduct(good2);
-    basket.addProduct(good3);
-        
-    console.log(basket.quantity());
-    console.log(basket.amount());
-        
-        
-        
-    
+
+        function Basket() {
+            var products = [];
+            var quantity;
+            var amount = 0;
+            this.addProduct = function(obj) {
+                products[products.length] = obj.name;
+                quantity = products.length;
+                amount += +obj.price;
+            };
+            this.quantity = function() {
+                return 'Количество товара: ' + quantity + ' шт.';
+            };
+            this.amount = function() {
+                return 'Сумма покупок: ' + amount + ' руб.';
+            }
+        }
+
+        var good1 = new Product('first', 9000);
+        var good2 = new Product('second', 8700);
+        var good3 = new Product('third', 12300);
+
+        var basket = new Basket();
+
+        basket.addProduct(good1);
+        basket.addProduct(good2);
+        basket.addProduct(good3);
+
+        console.log(basket.quantity());
+        console.log(basket.amount());
+
     </script>
 </body>
+
 </html>

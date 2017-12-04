@@ -13,40 +13,42 @@
             this.age = age;
             this.gender = gender;
             this.interests = interests;
-            
+
             this.toString = function() {
                 return 'Человек: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + this.gender + '. Интересы: ' + this.interests + '.';
             }
         }
-        
+
         function Student(name, age, gender, interests, inst) {
             Human.call(this, name, age, gender, interests);
             this.inst = inst;
+
             this.toString = function() {
                 return 'Студент: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + this.gender + '. Интересы: ' + this.interests + '. Обучается в: ' + this.inst + '.';
             }
         }
-        
+
         var hum1 = new Human('Иван', 25, 'м', 'музыка, программирование');
         var stud1 = new Student('Иван', 25, 'м', 'музыка, программирование', 'ИТМО');
-        
+
         console.log(hum1.toString());
         console.log(stud1.toString());
-        
+
         /* или вот так*/
+
         function Student2(obj, inst) {
             this.inst = inst;
+
             this.toString = function() {
                 return 'Студент2: ' + obj.name + '. Возраст: ' + obj.age + '. Пол: ' + obj.gender + '. Интересы: ' + obj.interests + '. Обучается в: ' + this.inst + '.';
             }
         }
-        
+
         var hum2 = new Human('Аня', 22, 'ж', 'программирование, музыка');
         var stud2 = new Student2(hum2, 'ИТМО');
-        
+
         console.log(stud2.toString());
-        
-        
+
     </script>
 </body>
 
