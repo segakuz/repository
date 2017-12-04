@@ -59,19 +59,19 @@
                 if (i === 1) {
                     ylw.classList.toggle('on');
                     grn.classList.toggle('on');
-                    i++;
+                    return i++;
                 } else if (i === 2) {
                     red.classList.toggle('on');
                     ylw.classList.toggle('on');
-                    i++;
+                    return i++;
                 } else if (i === 3) {
                     ylw.classList.toggle('on');
-                    i++;
+                    return i++;
                 } else {
                     ylw.classList.toggle('on');
                     grn.classList.toggle('on');
                     red.classList.toggle('on');
-                    i = 1;
+                    return i = 1;
                 }
             }
         }
