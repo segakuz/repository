@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            border: 1px solid #606060;
+            box-sizing: border-box;
+        }
+
+        caption {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        th {
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 16px;
+            border: 1px dotted rgba(118, 118, 118, 0.58);
+            width: 30%;
+        }
+        tr > td:first-child, 
+        tr > th:first-child {
+            width: 10%;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(155, 155, 155, 0.53)
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <table id="myTable">
+        <caption>Самые популярные фамилии по странам</caption>
+        <tr>
+            <th onclick="sortTable(0)">id</th>
+            <th onclick="sortTable(1)">Фамилия</th>
+            <th onclick="sortTable(2)">Страна</th>
+            <th onclick="sortTable(3)">Количество людей с такой фамилией</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ким</td>
+            <td>Корея</td>
+            <td>9925949</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Иванов</td>
+            <td>Беларусь</td>
+            <td>57200</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Женсен</td>
+            <td>Дания</td>
+            <td>271607</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Смирнов</td>
+            <td>Россия</td>
+            <td>2659988</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Мюллер</td>
+            <td>Германия</td>
+            <td>772277</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Смит</td>
+            <td>Америка</td>
+            <td>2772200</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Мартен</td>
+            <td>Франция</td>
+            <td>235000</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Сату</td>
+            <td>Япония</td>
+            <td>91487</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Мельник</td>
+            <td>Украина</td>
+            <td>174057</td>
+        </tr>
+    </table>
+
+    <script>
+        function sortTable(n) {
+            var table = document.getElementById("myTable");
+            var rows; 
+            var i; 
+            var x; 
+            var y; 
+            var doSwitch;
+            
+            var count = 0;
+            var switching = true;
+            var dir = "asc";
+
+            while (switching) {
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+
+                for (i = 1; i < (rows.length - 1); i++) {
+                    doSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                    if (dir == "asc") {
+                        if (isFinite(x.innerHTML) && isFinite(y.innerHTML)) {
+                            if (+x.innerHTML > +y.innerHTML) {
+                                doSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                doSwitch = true;
+                                break;
+                            }
+                        }
+                    } else if (dir == "desc") {
+                        if (isFinite(x.innerHTML) && isFinite(y.innerHTML)) {
+                            if (+x.innerHTML < +y.innerHTML) {
+                                doSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                doSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (doSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    count++;
+                } else {
+                    if (count == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+
+<body>
+    <script>
+        function Human(name, age, gender, interests) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+        }
+
+        Human.prototype.toString = function() {
+            return 'Человек: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + this.gender + '. Интересы: ' + this.interests + '.';
+        }
+
+        var hum1 = new Human('Иван', 25, 'м', 'музыка, программирование');
+        console.log('Exemplar human\n' + hum1);
+
+        function Student(name, age, gender, interests, inst) {
+            Human.call(this, name, age, gender, interests);
+            this.inst = inst;
+        }
+
+        Student.prototype.toString = function() {
+            return 'Студент: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + this.gender + '. Интересы: ' + this.interests + '. Обучается в: ' + this.inst + '.';
+        }
+
+        Student.prototype.__proto__ = Human.prototype;
+
+        var stud1 = new Student('Иван', 25, 'м', 'музыка, программирование', 'ИТМО');
+        console.log('Exemplar student\n' + stud1);
+
+        /* или вот так*/
+
+        function Student2(obj, inst) {
+            this.name = obj.name;
+            this.age = obj.age;
+            this.gender = obj.gender;
+            this.interests = obj.interests;
+            this.inst = inst;
+        }
+
+        Student2.prototype.toString = function() {
+            return 'Студент2: ' + this.name + '. Возраст: ' + this.age + '. Пол: ' + this.gender + '. Интересы: ' + this.interests + '. Обучается в: ' + this.inst + '.';
+        }
+
+        /* еще вот так, но появляется доп слово Человек
+        Student2.prototype.toString = function() {
+            return 'Студент2: ' + (Student2.prototype.__proto__.toString.call(this)) + ' Обучается в: ' + this.inst + '.';
+        }
+        */
+        Student2.prototype.__proto__ = Human.prototype;
+
+        var hum2 = new Human('Оксана', 30, 'ж', 'программирование, музыка');
+        var stud2 = new Student2(hum2, 'ИТМО');
+
+        console.log('Exemplar student2\n' + stud2);
+
+    </script>
+</body>
+
+</html>
