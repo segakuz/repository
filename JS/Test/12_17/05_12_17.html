@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05.12.2017</title>
+    <style>
+        /* к первой задаче
+        body {
+            font-size: 30px;
+        }
+
+        .complete {
+            text-decoration: line-through;
+        }
+*/
+
+    </style>
+</head>
+
+<body>
+
+    <!--    <div class="tasks"></div>-->
+
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1 taskManager типа в отдельном файле
+        ;
+        window.TaskManager = function(el) {
+            this.el = el;
+            this.id = 0;
+
+        };
+
+        TaskManager.prototype.getId = function() {
+            return this.id++;
+        };
+
+        TaskManager.prototype.addTask = function(title) {
+            var id = this.getId();
+            var task = new Task(title, id);
+            this.el.appendChild(task.template());
+        };
+
+        function Task(title, id) {
+            this.id = id;
+            this.title = title;
+            this.complete = false;
+        };
+
+        Task.prototype.template = function() {
+            var elDiv = document.createElement('div');
+            elDiv.setAttribute('data-id', this.id);
+            elDiv.classList.add('task');
+
+            var span = document.createElement('span');
+            span.innerText = this.title;
+
+            var checkBox = document.createElement('input');
+            checkBox.type = 'checkbox';
+            checkBox.setAttribute('cont-id', this.id);
+
+            elDiv.appendChild(checkBox);
+            elDiv.appendChild(span);
+
+            checkBox.addEventListener('click', this.mark.bind(this));
+            //var that = this;
+            //checkBox.addEventListener('click', function(e) {    //эта запись заменяет bind(this);
+            //    that.mark.call(that, e);
+            //});
+            return elDiv;
+        };
+
+        Task.prototype.mark = function(e) {
+            var isChecked = e.target.checked;
+            var parentDiv = e.target.parentNode;
+            if (isChecked) {
+                parentDiv.classList.add('complete');
+                this.complete = true;
+            } else {
+                parentDiv.classList.remove('complete');
+                this.complete = false;
+            }
+        };
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2 продолжение первой задачи 
+        var mainDiv = document.querySelector('.tasks');
+        var taskManager = new TaskManager(mainDiv);
+        taskManager.addTask('Первая задача');
+        taskManager.addTask('Вторая задача');
+        taskManager.addTask('Третья задача');
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 3 слайдер*/
+        ;
+        (function() {
+
+            window.Slider = function mySlider (el, objSetting) {
+                this.el = el;
+                this.el.classList.add('container');
+                var newDiv = document.createElement('div');
+                newDiv.classList.add('image-slider-wrapper');
+                var elUl = document.createElement('ul');
+            }
+
+        }());
+        /*--------------------------------------------------------------------------------*/
+        /* 4*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 5*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 6*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 7*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 8*/
+
+    </script>
+</body>
+
+</html>

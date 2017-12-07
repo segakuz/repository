@@ -55,10 +55,7 @@
 
         //var timer = setInterval(function() {light();}, 2000);
         
-        var tempFunc = light();
-        var timer = setInterval(function() {
-            tempFunc();
-        }, 2000);
+        var timer = setInterval(light(), 2000);
 
         function light() {
             var i = 1;
