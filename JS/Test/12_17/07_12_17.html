@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07.12.2017</title>
+    <style>
+        body {
+            background: #6c6c6c;
+        }
+
+        /*
+        #gamePlace {
+            position: relative;
+            border: 1px solid black;
+            background: #fff;
+            height: 200px;
+            width: 200px;
+        }
+
+        #box1 {
+            background: red;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+        }
+
+        #box2 {
+            background: green;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+        }
+*/
+
+        #workField {
+            height: 400px;
+            width: 400px;
+            background: #ffffff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--
+    <div id="gamePlace">
+        <div id="box1" style="left:0; top:0; width:20px; height:20px;"></div>
+        <div id="box2" style="left:150px; top:150px; width:20px; height:20px;"></div>
+    </div>
+-->
+    <canvas id="workField" width=400 height=400></canvas>
+
+
+
+    <script>
+        /*--------------------------------------------------------------------------------*/
+        /* 1 игра
+        document.onkeydown = function(e) {
+            var tempX;
+            var tempY;
+            if (e.keyCode === 37) {
+                tempX = parseInt(box1.style.left) - 5; //ограничитель по краю
+                if (tempX >= 0) {
+                    box1.style.left = tempX + 'px';
+                    checkCross();
+                }
+            } else if (e.keyCode === 39) {
+            
+                
+
+        tempX = parseInt(box1.style.left) + 5;
+        if (tempX <= 180) {
+            box1.style.left = tempX + 'px';
+            checkCross();
+        }
+
+        } else if (e.keyCode === 38) {
+            tempY = parseInt(box1.style.top) - 5;
+            if (tempY >= 0) {
+                box1.style.top = tempY + 'px';
+                checkCross();
+            }
+
+        } else if (e.keyCode === 40) {
+            tempY = parseInt(box1.style.top) + 5;
+            if (tempY <= 180) {
+                box1.style.top = tempY + 'px';
+                checkCross();
+            }
+
+        }
+        }
+
+        function intersection(a, b) {
+            var a_x1 = parseInt(a.style.left);
+            var a_x2 = a_x1 + parseInt(a.style.width);
+
+            var b_x1 = parseInt(b.style.left);
+            var b_x2 = b_x1 + parseInt(b.style.width);
+            var isCrossX = (a_x1 <= b_x1 && b_x1 <= a_x2) || (a_x1 <= b_x2 && b_x2 <= a_x2);
+
+            var a_y1 = parseInt(a.style.top);
+            var a_y2 = a_y1 + parseInt(a.style.height);
+
+            var b_y1 = parseInt(b.style.top);
+            var b_y2 = b_y1 + parseInt(b.style.height);
+            var isCrossY = (a_y1 <= b_y1 && b_y1 <= a_y2) || (a_y1 <= b_y2 && b_y2 <= a_y2);
+
+            return isCrossX && isCrossY;
+        }
+
+        function checkCross() {
+            if (intersection(box1, box2)) {
+                box1.style.background = 'green';
+            } else {
+                box1.style.background = 'red';
+            }
+        }
+        */
+        /* или так
+            tempX = parseInt(box1.style.left)+5+parseInt(box1.style.width);
+            var gamePlace_x2 = parseInt(gamePlace.style.width);
+            if(tempX <= gamePlace_x2) {
+            box1.style.left = (parseInt(box1.style.left)+5)+'px';
+            checkCross();
+            }
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 2
+
+        var draw = false;
+        workField.onmousedown = function(e) {
+            draw = true;
+        }
+
+        workField.onmousemove = function(e) {
+            if (draw) {
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                if (x < 200 && y < 200) {
+                    var context = this.getContext('2d');
+                    context.fillStyle = 'orange';
+                    context.fillRect(x, y, 5, 5);
+                    
+                    context.fillStyle = 'green';
+                    context.fillRect(x+200 , y, 5, 5);
+                    
+                    context.fillStyle = 'blue';
+                    context.fillRect(x, y+200, 5, 5);
+                    
+                    context.fillStyle = 'red';
+                    context.fillRect(x+200, y+200, 5, 5);
+                }
+            }
+        }
+
+        workField.onmouseup = function(e) {
+            draw = false;
+        }
+
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 3
+        var draw = false;
+        var context = workField.getContext('2d');
+        context.fillStyle = 'black';
+        context.fillRect(0,0,400,400);
+        
+        workField.onmousedown = function(e) {
+            draw = true;
+        }
+
+        workField.onmousemove = function(e) {
+            if (draw) {
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                if (x < 200 && y < 200) {
+                    var context = this.getContext('2d');
+                    context.fillStyle = 'orange';
+                    context.fillRect(x, y, 5, 5);
+                    
+                    context.fillStyle = 'green';
+                    context.fillRect(x*(-1)+400 , y, 5, 5);
+                    
+                    context.fillStyle = 'blue';
+                    context.fillRect(x, y*(-1)+400, 5, 5);
+                    
+                    context.fillStyle = 'red';
+                    context.fillRect(x*(-1)+400, y*(-1)+400, 5, 5);
+                }
+            }
+        }
+
+        workField.onmouseup = function(e) {
+            draw = false;
+        }
+        */
+        /*--------------------------------------------------------------------------------*/
+        /* 4*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 5*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 6*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 7*/
+
+        /*--------------------------------------------------------------------------------*/
+        /* 8*/
+
+    </script>
+</body>
+
+</html>
