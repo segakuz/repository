@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Headshoter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            background-image: url(desert.jpg);
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            cursor: url(target.png), auto;
+        }
+
+        section {
+            background: rgba(60, 110, 203, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            height: 100vh;
+            width: 100%;
+        }
+
+        img.block {
+            position: absolute;
+            z-index: 4;
+        }
+
+        #one img.block {
+            height: 100px;
+            width: 200px;
+            top: 75%;
+            left: 10%;
+        }
+
+        #two img.block {
+            height: 100px;
+            width: 200px;
+            top: 75%;
+            left: 42%;
+        }
+
+        #three img.block {
+            height: 100px;
+            width: 200px;
+            top: 75%;
+            left: 75%;
+        }
+
+        #four img.block {
+            height: 80px;
+            width: 160px;
+            top: 55%;
+            left: 26%;
+        }
+
+        #five img.block {
+            height: 80px;
+            width: 160px;
+            top: 55%;
+            left: 59%;
+        }
+
+        img.cowboy {
+            position: absolute;
+            z-index: 3;
+            visibility: hidden
+        }
+
+        #cowb1,
+        #cowb2,
+        #cowb3 {
+            height: 100px;
+            width: 80px;
+
+        }
+
+        #cowb4,
+        #cowb5 {
+            height: 80px;
+            width: 74px;
+        }
+
+        span {
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            color: #fff;
+            font-size: 50px;
+        }
+        .on {
+            visibility: visible;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <span id="span"></span>
+            <div id="one">
+                <img src="block.png" alt="" class="block">
+                <img src="cowboy.png" alt="" class="cowboy" style="top: 60%; left: 14%" id="cowb1">
+                <!--75 60-->
+            </div>
+            <div id="two">
+                <img src="block.png" alt="" class="block">
+                <img src="cowboy.png" alt="" class="cowboy" style="top: 60%; left: 46%" id="cowb2">
+                <!--75 60-->
+            </div>
+            <div id="three">
+                <img src="block.png" alt="" class="block">
+                <img src="cowboy.png" alt="" class="cowboy" style="top: 60%; left: 79%" id="cowb3">
+                <!--75 60-->
+            </div>
+            <div id="four">
+                <img src="block.png" alt="" class="block">
+                <img src="cowboy.png" alt="" class="cowboy" style="top: 43%; left: 29%" id="cowb4">
+                <!--55 43-->
+            </div>
+            <div id="five">
+                <img src="block.png" alt="" class="block">
+                <img src="cowboy.png" alt="" class="cowboy" style="top: 43%; left: 62%" id="cowb5">
+                <!--55 43-->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function Cowboy(id, x1, x2, y1, y2) {
+            this.id = id;
+            this.x1 = x1;
+            this.x2 = x2;
+            this.y1 = y1;
+            this.y2 = y2;
+        }
+
+
+        var cowboy1 = new Cowboy(cowb1, 205, 235, 385, 430);
+        var cowboy2 = new Cowboy(cowb2, 640, 670, 385, 430);
+        var cowboy3 = new Cowboy(cowb3, 1092, 1122, 385, 430);
+        var cowboy4 = new Cowboy(cowb4, 409, 434, 275, 310);
+        var cowboy5 = new Cowboy(cowb5, 860, 885, 275, 310);
+        var arr = [];
+        var score = 0;
+        
+        var cowboys = [cowboy1,cowboy2,cowboy3,cowboy4,cowboy5];
+        
+        for (var i = 0; i < cowboys.length; i++) {
+            cowboys[i].id.addEventListener('click', isHit);
+            cowboys[i].id.onclick = function() {
+            //arr.splice(0,1);
+            }
+        }
+        
+        function rand() {
+                return Math.floor(Math.random() * 5) + 1;
+        }
+        
+        function showCB() {
+            var temp = rand();
+            var id;
+            //id.style.visibility = 'visible';
+            if(arr.indexOf(temp)=== -1) {
+                arr.push(temp);
+                id = cowboys[temp].id;
+                id.style.visibility = 'visible';
+            } else {
+                while(arr.indexOf(temp) !== -1) {
+                    temp = rand();
+                }
+                arr.push(temp);
+                id = cowboys[temp].id;
+                id.style.visibility = 'visible';
+            }
+            
+        }
+        
+        function isHit(e) {
+            score += 10;
+            span.innerText = 'Score: '+score;
+            e.target.style.visibility = 'hidden';
+        }
+        
+        var timer = setInterval(showCB, 1000);
+        
+        if(score > 100) {
+            clearInterval(timer);
+            timer = setInterval(showCB, 100);
+        } else if(score > 200) {
+            clearInterval(timer);
+            timer = setInterval(showCB, 50);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
