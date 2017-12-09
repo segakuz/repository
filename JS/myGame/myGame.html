@@ -153,7 +153,7 @@
         var cowboy3 = new Cowboy(cowb3, 1092, 1122, 385, 430);
         var cowboy4 = new Cowboy(cowb4, 409, 434, 275, 310);
         var cowboy5 = new Cowboy(cowb5, 860, 885, 275, 310);
-        var arr = [];
+        //var arr = [];
         var score = 0;
         
         var cowboys = [cowboy1,cowboy2,cowboy3,cowboy4,cowboy5];
@@ -171,26 +171,29 @@
         
         function showCB() {
             var temp = rand();
-            var id;
+            var num;
+            //arr.push(temp);
+                num = cowboys[temp-1];
+                num.id.style.visibility = 'visible';
             //id.style.visibility = 'visible';
-            if(arr.indexOf(temp)=== -1) {
-                arr.push(temp);
-                id = cowboys[temp].id;
-                id.style.visibility = 'visible';
-            } else {
-                while(arr.indexOf(temp) !== -1) {
-                    temp = rand();
-                }
-                arr.push(temp);
-                id = cowboys[temp].id;
-                id.style.visibility = 'visible';
-            }
+//            if(arr.indexOf(temp)=== -1) {
+//                arr.push(temp);
+//                id = cowboys[temp].id;
+//                id.style.visibility = 'visible';
+//            } else {
+//                while(arr.indexOf(temp) !== -1) {
+//                    temp = rand();
+//                }
+//                arr.push(temp);
+//                id = cowboys[temp].id;
+//                id.style.visibility = 'visible';
+//            }
             
         }
         
         function isHit(e) {
             score += 10;
-            span.innerText = 'Score: '+score;
+            span.innerText = 'Score: '+score + '\nHEADSHOT!';
             e.target.style.visibility = 'hidden';
         }
         
@@ -198,10 +201,10 @@
         
         if(score > 100) {
             clearInterval(timer);
-            timer = setInterval(showCB, 100);
+            timer = setInterval(showCB, 700);
         } else if(score > 200) {
             clearInterval(timer);
-            timer = setInterval(showCB, 50);
+            timer = setInterval(showCB, 500);
         }
 
 
