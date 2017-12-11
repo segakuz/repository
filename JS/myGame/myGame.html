@@ -159,7 +159,9 @@
         var cowboys = [cowboy1,cowboy2,cowboy3,cowboy4,cowboy5];
         
         for (var i = 0; i < cowboys.length; i++) {
-            cowboys[i].id.addEventListener('click', isHit);
+            cowboys[i].id.addEventListener('click', function(e){
+                isHit(e, cowboys[i]);
+            });
             cowboys[i].id.onclick = function() {
             //arr.splice(0,1);
             }
@@ -191,7 +193,7 @@
             
         }
         
-        function isHit(e) {
+        function isHit(e, obj) {
             score += 10;
             span.innerText = 'Score: '+score + '\nHEADSHOT!';
             e.target.style.visibility = 'hidden';
