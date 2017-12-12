@@ -17,9 +17,11 @@
             height: 100vh;
             width: 100%;
             position: relative;
-            cursor: url(images/target.png), auto;
+            cursor: url(images/target.png) 15 15, auto;
         }
-
+        main:active {
+            cursor: url(images/shot.png) 20 25, auto;
+        }
         section {
             background: rgba(34, 58, 94, 0.5);
             position: absolute;
@@ -208,6 +210,19 @@
         /**/
 
         //------------------обработчик событий
+        /*
+        cowb1.style.visibility = 'visible';
+        cowb1.onclick = function(e) {
+            console.log('x ' + (e.pageX - this.offsetLeft) + '\ny ' + (e.pageY - this.offsetTop));
+        };
+        cowb4.style.visibility = 'visible';
+        cowb4.onclick = function(e) {
+            console.log('x ' + (e.pageX - this.offsetLeft) + 'y ' + (e.pageY - this.offsetTop));
+        }
+        */
+        
+        
+        
         cowb1.onclick = function(e) {
             var x = e.pageX - this.offsetLeft;
             var y = e.pageY - this.offsetTop;
@@ -233,7 +248,7 @@
             var y = e.pageY - this.offsetTop;
             isHit(e, 4, x, y);
         };
-
+        
         //------------------генерация рандомного числа
         function rand() {
             return Math.floor(Math.random() * 5);
@@ -282,7 +297,7 @@
         //--------------попадание в ковбоя
         function isHit(e, m, x, y) {
             if (game) {
-                if (x >= 15 && x <= 40 && y >= 0 && y <= 21) {
+                if (x >= 30 && x <= 55 && y >= 17 && y <= 35) {
                     score += 10;
                     count++;
                     headshots++;
@@ -293,7 +308,7 @@
                     e.target.style.visibility = 'hidden';
                     arr.splice(arr.indexOf(m), 1);
 
-                } else if (x >= 15 && y <= 40 && x >= 22 && y <= 48) {
+                } else if (x >= 30 && y <= 55 && x >= 36 && y <= 64) {
                     score += 5;
                     count++;
                     bodyshots++;
