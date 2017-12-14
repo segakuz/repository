@@ -178,7 +178,9 @@
     </main>
 
     <script>
-        //------------------запрещаем контекстное меню и выделение текста
+        
+        $(function () {
+             //------------------запрещаем контекстное меню и выделение текста
         $('main').on('contextmenu selectstart', function(e) {
             e.preventDefault();
         });
@@ -323,6 +325,9 @@
                 e.preventDefault;
             }
         }
+        });
+        
+       
 
     </script>
 
