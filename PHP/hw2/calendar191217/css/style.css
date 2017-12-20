@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #525252;
+    border: 2px dotted #525252;
+    border-radius: 5px;
+    width: max-content;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+
+}
+img {
+    margin: 0 20px 20px 0;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 1);
+    float: left;
+}
