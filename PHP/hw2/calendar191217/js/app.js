@@ -1,4 +1,5 @@
-let dt = '019.12.2017';
+//var dt = '019.12.2017';
+var dt = '31.12.2017';
 
 var request = $.ajax({
     method: "POST",
