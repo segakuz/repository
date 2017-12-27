@@ -1,5 +1,5 @@
 //var dt = '019.12.2017';
-var dt = '31.12.2017';
+var dt = '19.12.2017';
 
 var request = $.ajax({
     method: "POST",
@@ -17,7 +17,7 @@ request.done(function (msg) {
 */
 /* второй способ */
 request.done(function (msg) {
-    $('#day-calendar').html("<h1>" + msg[0] + "</h1>" + "<h2>" + msg[1] + "</h2>" + "<img src=" + msg[3] + ">" + "<p>" + msg[2] + "</p>");
+    $('#day-calendar').html(msg);
 });
 
 request.fail(function (jqXHR, textStatus) {
