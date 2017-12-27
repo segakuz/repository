@@ -23,7 +23,7 @@ $(function () {
     */
     /* второй способ */
     request.done(function (msg) {
-        $('#day-calendar').html( /*"<h1>" + msg[0] + "</h1>" + */ "<h2>" + msg[1] + "</h2>" + "<img src=" + msg[3] + ">" + "<p>" + msg[2] + "</p>");
+        $('#day-calendar').html(msg);
     });
 
     request.fail(function (jqXHR, textStatus) {

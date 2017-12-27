@@ -15,6 +15,7 @@ echo json_encode($arr);
 $file_src = 'tmpl/'.$_POST['id'].'.txt';
 $str = file_get_contents($file_src, FILE_USE_INCLUDE_PATH);
 $arr = explode(';', $str);
-echo json_encode($arr);
+$output_str =  "<h1>" . $arr[0] . "</h1>" .  "<h2>" + $arr[1] . "</h2>" . "<img src=" . $arr[3] . ">" . "<p>" . $arr[2] . "</p>";
+echo json_encode($output_str);
 
 ?>

@@ -22,7 +22,7 @@ function generateTable() {
     
     for($i = 1; $i <= 31; $i++) {
         $n = ($i < 10)?'0'.$i : $i;
-        $table .= '<td><a href="page.php?dt=' . $n . $dec_2017 . '">' . $i . $december . '</a></td>';
+        $table .= '<td><a href="page.php?dt=' . $n . $dec_2017 . '">' . $i . '</a></td>';
         if ($i % 7 === 0) {
             $table .= '</tr><tr>';
         };
@@ -42,9 +42,7 @@ generateTable();
     
 ?>
 
-<br>
-<br>
-<a href="feed.php">Просмотр всех событий</a>
+
 
 </body>
 
