@@ -45,6 +45,8 @@ div#day-calendar {
     
 }
 
+
+
 #admin_page fieldset {
     width: 50vw;
     padding: 20px;
@@ -64,6 +66,9 @@ div#day-calendar {
 #admin_page textarea {
     height: 80px;
 }
+
+
+
 
 #auth_page fieldset {
     width: 50vw;
