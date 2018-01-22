@@ -23,7 +23,8 @@ class Session {
 
     function get($key) {
         //проверка установлен ли ключ isset() ? null;
-        return $this->session[$key];
+        $result = (isset($key))? $this->session[$key] : null;
+        return $result;
     }
 
     function set($key, $value) {
@@ -40,7 +41,8 @@ class Input {
 
     function get($key) {
         //проверка установлен ли ключ isset() ? null;
-        return $this->input[$key];
+        $result = (isset($key))? $this->input[$key] : null;
+        return $result;
     }
 
     function set($key, $value) {
@@ -58,7 +60,8 @@ class Server {
 
     function get($key) {
         //проверка установлен ли ключ isset() ? null;
-        return $this->server[$key];
+        $result = (isset($key))? $this->server[$key] : null;
+        return $result;
     }
 
     function set($key, $value) {
@@ -84,9 +87,9 @@ class Application {
 $rq->session->get/set();
 $rq->input->get();*/
 
-$app = new Application();
-$app->request->input->set(xxx, 1135430);
-echo $app->request->input->get(xxx); //$_SERVER['SCRIPT_NAME']
+//$app = new Application();
+//$app->request->input->set(xxx, 1135430);
+//echo $app->request->input->get(xxx); //$_SERVER['SCRIPT_NAME']
 
 
 ?>
