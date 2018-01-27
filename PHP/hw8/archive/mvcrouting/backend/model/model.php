@@ -1,12 +1,16 @@
 <?php
 
+include './core/helper.php';
+
 class Model {
     //добавление страницы
     public function addPage($title, $text) {
         $lines = file('pages.txt');
         $arr = explode('~', end($lines));
         $i = $arr[0];
-        $i = str_replace(array(chr(187),chr(191),chr(239)), '', $i);
+        $i = str_replace(chr(187), '', $i);
+        $i = str_replace(chr(191), '', $i);
+        $i = str_replace(chr(239), '', $i);
         $i = +$i+1;
         $title = translit($title);
         $text = str_replace("\r\n", '<br>', $text);
@@ -20,7 +24,9 @@ class Model {
         foreach($lines as $key=>$value) {
             $arr = explode('~', $value);
             $i = $arr[0];
-            //$i = str_replace(array(chr(187),chr(191),chr(239)), '', $i);
+            //$i = str_replace(chr(187), '', $i);
+            //$i = str_replace(chr(191), '', $i);
+            //$i = str_replace(chr(239), '', $i);
             if(+$i !== +$id) {
                 fwrite($fop, $lines[$key]);
             }
@@ -29,20 +35,24 @@ class Model {
     }
     //редактирование страницы
     public function editPage($id, $title, $text) {
-        $text = str_replace("\r\n", '<br>', $text);
-        $lines = file('pages.txt');
-        $fop = fopen('pages.txt', 'w+b');
-        $title = translit($title);
-            foreach($lines as $key=>$value) {
-                $arr = explode('~', $value);
-            if(+$arr[0] === +$id) {
-                $str = "{$id}~{$title}~{$text}\r\n";
-                fwrite($fop, $str);
-            } else {
-                fwrite($fop, $lines[$key]);
+        if(!empty($title) && !empty($text)) {
+            if(substr_count($text, "\r\n") > 0) {
+                $text = str_replace("\r\n", '<br>', $text);
             }
-        }
-        fclose($fop);
+            $lines = file('pages.txt');
+            $fop = fopen('pages.txt', 'w+b');
+            $title = translit($title);
+                foreach($lines as $key=>$value) {
+                    $arr = explode('~', $value);
+                if(+$arr[0] === +$id) {
+                    $str = "{$id}~{$title}~{$text}\r\n";
+                    fwrite($fop, $str);
+                } else {
+                    fwrite($fop, $lines[$key]);
+                }
+            }
+            fclose($fop);
+        }   
     }
     //получение страницы
     public function getPage($id) {
@@ -68,13 +78,10 @@ class Model {
                 'id' => $str_arr[0],
                 'title' => $str_arr[1],
                 'text' => $str_arr[2]
-                ];
+            ];
         }
         return ($arr)? array_reverse($arr) : null;
     }
 }
-
-
-
-
-
+//если за знаком конца скрипта оставить несколько пустых строк, то скрипт не выполняется
+?>

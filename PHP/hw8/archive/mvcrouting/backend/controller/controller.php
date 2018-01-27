@@ -1,16 +1,14 @@
 <?php
 
-//include './backend/model/model.php';
-//include './backend/view/view.php';
+include './backend/model/model.php';
+include './backend/view/view.php';
 
 class Controller {
     public function indexAction() {
         $model = new Model();
         $mdl = $model->getAllPages();
-        $v = new View('template.php');
-        $v->render($mdl);
-//        $v = new View();
-//        $v->render($mdl, './asset/tpl/template.php');
+        $v = new View();
+        $v->render($mdl, './asset/tpl/template.php');
     }
     
     public function adminAction($id) {
@@ -18,20 +16,12 @@ class Controller {
         if(!empty($id)) {
             $model = new Model();
             $data = $model->getPage($id);
-            $v = new View('admin.php');
-            $v->render($data);
-        } else {
-            $v = new View('admin.php');
-            $v->render($d);
-        }
-            
-            
-        /*    $v = new View();
+            $v = new View();
             $v->render($data, './asset/tpl/admin.php');
         } else {
             $v = new View();
             $v->render($d, './asset/tpl/admin.php');
-        }*/
+        }
     }
     
     public function addAction() {
@@ -63,7 +53,7 @@ class Controller {
         //echo 'получение страницы';
         $model = new Model();
         $mdl = $model->getPage($id);
-        $v = new View('template.php');
-        $v->render($mdl);
+        $v = new View();
+        $v->render($mdl, './asset/tpl/template.php');
     }
 }

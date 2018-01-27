@@ -26,8 +26,8 @@
 
 
         </section>
-        <?php endforeach;
-        endif; ?>
+        <?php endforeach; ?>
+        <?php endif; ?>
 
     </main>
 

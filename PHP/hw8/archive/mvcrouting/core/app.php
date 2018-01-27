@@ -1,8 +1,8 @@
 <?php
 
-//include './backend/controller/controller.php';
-//include './backend/model/model.php';
-//include './backend/view/view.php';
+include './backend/controller/controller.php';
+
+//include "autoloader.php";
 //include "../config.php";
 
 /*class App {
@@ -14,9 +14,6 @@
     $ctr->$action();
    }
 }*/
-
-include './core/helper.php';
-include './core/autoloader.php';
 
 class App {
     public static function run() {
@@ -35,11 +32,4 @@ class App {
     }
 }
 
-
-
-
-
-
-
-
-
+?>
