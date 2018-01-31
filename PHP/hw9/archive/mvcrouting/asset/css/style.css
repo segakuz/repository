@@ -10,7 +10,6 @@ body {
 }
 
 /*--- admin.php ----------*/
-/*--- login.php ----------*/
 
 .auth_page label,
 .auth_page input:not([type="submit"]) {
@@ -29,7 +28,7 @@ a.auth_page:hover {
 fieldset.admin_page,
 .auth_page fieldset {
     width: 600px;
-    margin: 50px auto;
+    margin: 50px 0 0 150px;
     border-radius: 10px;
 }
 
@@ -64,24 +63,13 @@ fieldset.admin_page,
 
 /*--- template.php ----------*/
 
-div.page {
-    width: 1200px;
-    margin: auto;
-}
 
 main.page {
-/*    float: left;*/
+    float: left;
     display: inline-block;
-    width: 800px;
+    width: 70%;
     border: 1px solid black;
-    border-radius: 5px;
-    margin: 0 10px 10px 10px;
-}
-
-main.page button,
-aside.sidebar button {
-    border-radius: 3px;
-    background-color: #e2e2e2;
+    margin: 0;
 }
 
 section.post {
@@ -100,16 +88,12 @@ section.post {
 }
 
 aside.sidebar {
-/*    float: right;*/
+    float: right;
     display: inline-block;
-    width: 370px;
+    width: 30%;
     /*border: 1px solid black;*/
     padding: 5px;
-    vertical-align: top;
-    margin: auto;
-    background-color: #d8d8d8;
 }
-
 .sidebar button {
     margin-bottom: 2px;
 }
@@ -122,51 +106,14 @@ aside.sidebar {
     text-decoration: underline;
 }
 
-p.list_title {
-    color: #383838;
-    font-weight: 600;
-}
-
-a.links {
-    margin-right: 5px;
-}
-
 p.links {
     border-bottom: 1px dotted grey;
-    margin-bottom: 1px;
 }
 
-p.links button.btn {
-    visibility: hidden;
-}
-
-p.links:hover button.btn {
-    visibility: visible;
-
-}
-
-div.login_info {
-    text-align: right;
+.sidebar span {
+    display: block;
+    text-align: center;
     background-color: #585858;
-    padding: 5px;
+    color: #fff;
     margin-bottom: 10px;
 }
-
-.login_info span {
-    color: #fff;
-    padding-right: 40px;
-}
-
-div.login_info button {
-    margin-right: 20px;
-}
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 <?php 
-//include './core/app.php';
-//session_start();
-//$app = new App();
+include './core/app.php';
+session_start();
+$app = new App();
 
 /*$url = $_SERVER[ 'REQUEST_URI' ];
 $action  = basename($url);
@@ -16,14 +16,9 @@ echo $action2, '<br>';*/
 //$name = $app->request->auth->getName();
 //$name = UserProfile::getName();
 
-/*
-echo $name, '<br>';
+//echo $name, '<br>';
 echo '<pre>';
-print_r ($name);
+print_r ($_SESSION['profile']);
 echo '<br>';
-var_export($name);
+//var_export($name);
 echo '</pre>';
-*/
-<?= //(!empty($msg))? "<p>{$msg}</p>" : null ; ?>
-
-

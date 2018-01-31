@@ -10,8 +10,6 @@ class UserModel {
             $arr = explode('~', $line);
             if($arr[0] === $login && $arr[1] === $password) {
                 return ['name'=>'Sergei', 'phone'=>'89000000001', 'email'=>'example@mail.ru', 'role'=>'admin'];
-            } else {
-                return;
             }
         }
     }
@@ -57,9 +55,8 @@ class Auth {
             $_SESSION['auth'] = true;
             $_SESSION['profile'] = $this->user;
             $_SESSION['username'] = $result['name'];
-            return true;
         } else {
-            return false;
+            echo 'ошибка';
         }
     }
     

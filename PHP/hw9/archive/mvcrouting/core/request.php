@@ -5,14 +5,12 @@ class Request {
     public $server;
     public $session;
     public $auth;
-    //public $databaseHandler;
 
     function __construct() {
         $this->input = new Input(); 
         $this->server = new Server();
         $this->session = new Session();
         $this->auth = new Auth();
-        //$this->databaseHandler = new DatabaseHandler();
     }
 }
 
