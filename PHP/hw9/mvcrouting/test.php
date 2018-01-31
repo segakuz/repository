@@ -13,12 +13,12 @@ echo $action2, '<br>';*/
 
 //($app->request->auth->isAuth())? $app->request->auth->getProfile()['name'] : 'guest'; 
 
-$name = $app->request->auth->getName();
+//$name = $app->request->auth->getName();
 //$name = UserProfile::getName();
 
-echo $name, '<br>';
+//echo $name, '<br>';
 echo '<pre>';
-print_r ($name);
+print_r ($_SESSION['profile']);
 echo '<br>';
-var_export($name);
+//var_export($name);
 echo '</pre>';
