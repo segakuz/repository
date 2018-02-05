@@ -50,7 +50,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
             <p class="list_title">Список статей:</p>
             <?php if(!empty($data)) :
             foreach($data as $value): ?>
-            <div class="links">
+            <p class="links">
                 
                 <a href="get?<?= $value['id']; ?>" class="links">
                     <?= $value['id'] . ': ' . $value['title']; ?>
@@ -59,7 +59,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
                 <button class="btn"><a href="admin?<?= $value['id']; ?>">edit</a></button>
                 <button class="btn"><a href="del?<?= $value['id']; ?>">delete</a></button>
                 
-            </div>
+            </p>
 
     <?php endforeach;
     endif; ?>
@@ -121,7 +121,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
             <p class="list_title">Список статей:</p>
             <?php if(!empty($data)) :
             foreach($data as $value): ?>
-            <div class="links">
+            <p class="links">
 <!--
                 <button><a href="admin?<?= $value['id']; ?>">edit</a></button>
                 <button><a href="del?<?= $value['id']; ?>">delete</a></button>
@@ -129,7 +129,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
                 <a href="get?<?= $value['id']; ?>">
                     <?= $value['id'] . ': ' . $value['title']; ?>
                 </a>
-            </div>
+            </p>
 
     <?php endforeach;
     endif; ?>

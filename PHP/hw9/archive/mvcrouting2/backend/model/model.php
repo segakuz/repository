@@ -72,17 +72,6 @@ class Model {
         }
         return ($arr)? array_reverse($arr) : null;
     }
-    /*public function getAllPages() {
-        $name = $_GET['name'];
-        $pass = $_GET['pass'];
-        $query = 'insert into authirization values (99, :name, :pass)';
-        //экранирование одинароной кавычки
-        //$result = DatabaseHandler::Execute($query, ['name'=>$name, 'pass'=>$pass]);
-        //return $result;
-        $res = DatabaseHandler::GetAll('select name, pass from authirization where id_auth=:id', ['id'=>1]);
-        return $res;
-    }*/
-    
 }
 
 

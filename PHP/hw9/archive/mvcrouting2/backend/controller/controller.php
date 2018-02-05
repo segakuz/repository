@@ -1,16 +1,5 @@
 <?php
 
-
-/*class Debug {
-    public static function log($value, $description='') {
-        echo '<pre>';
-        echo $description;
-        var_dump($value);
-        echo '</pre>';
-        
-    }
-}*/
-
 class Controller {
     public function indexAction() {
         //главная
@@ -18,8 +7,6 @@ class Controller {
         $mdl = $model->getAllPages();
         $v = new View('template.php');
         $v->render($mdl);
-        //Debug::log($mdl);
-        //exit();
     }
     
     public function adminAction($id) {

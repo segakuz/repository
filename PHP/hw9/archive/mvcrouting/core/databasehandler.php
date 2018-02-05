@@ -1,6 +1,5 @@
 <?php
-include 'core/config.php'; //нужно поместить в ядро
-
+//include 'config.php';
 //Class providing generic data access functionality
 //$result = DatabaseHandler::GetAll('select * from auth where id= :id', ['id'=>100]);
 
@@ -10,7 +9,6 @@ class DatabaseHandler {
 
     private static function GetHandler() {
         if (!isset(self::$_mHandler)) {
-            
             try {
                 // Create a new PDO class instance
                 self::$_mHandler = 	new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD, array(PDO::ATTR_PERSISTENT => DB_PERSISTENCY));
@@ -25,12 +23,12 @@ class DatabaseHandler {
         // Return the database handler
         return self::$_mHandler;
     }
-//--------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
     // Clear the PDO class instance
     public static function Close() {
         self::$_mHandler = null;
     }
-//--------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
     // Wrapper method for PDOStatement::execute()
     public static function Execute($sqlQuery, $params = null) {
         // Try to execute an SQL query or a stored procedure
@@ -48,7 +46,7 @@ class DatabaseHandler {
             trigger_error($e->getMessage(), E_USER_ERROR);
         }
     }
-//----------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
     // Wrapper method for PDOStatement::fetchAll()
     public static function GetAll($sqlQuery, $params = null, $fetchStyle = PDO::FETCH_ASSOC) {
         // Initialize the return value to null
@@ -75,7 +73,7 @@ class DatabaseHandler {
         // Return the query results
         return $result;
     }
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
     // Wrapper method for PDOStatement::fetch()
     public static function GetRow($sqlQuery, $params = null, $fetchStyle = PDO::FETCH_ASSOC) {
         // Initialize the return value to null
@@ -99,7 +97,7 @@ class DatabaseHandler {
         // Return the query results
         return $result;
     }
-//---------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
     // Return the first column value from a row
     public static function GetOne($sqlQuery, $params = null) {
         // Initialize the return value to null
