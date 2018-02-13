@@ -1,42 +1,47 @@
 $(function () {
     
-    var request = $.ajax({
+    getUsers();    
+    
+    /*$('.users_table').on('click', 'td', function (e) {
+       //alert( "Handler for .click() called."); 
+        var fval = $(this).html();
+        console.log(fval);
+    });*/
+    
+    $('.users_table').on('click', 'button', function (e) {
+        if($(this).text() === 'Edit') {
+            console.log('edit');
+        } else if($(this).text() === 'Del') {
+            console.log('delete');
+            
+            
+        } else if($(this).text() === 'Add') {
+            var name = $('#name').val();
+            var login = $('#login').val();
+            var age = $('#age').val();
+            var email = $('#email').val();
+            addUsers(name, login, age, email);
+            $('#name').val('');
+            $('#login').val('');
+            $('#age').val('');
+            $('#email').val('');
+        }
+    });
+    
+    function deleteUsers() {
+        
+    }
+    
+    function addUsers(n, l, a, e) {
+        var request = $.ajax({
             method: "POST",
             url: "../backend/controller/controller.php",
             data: {
-                route_data: "admin"
-            },
-            //dataType: "html"
-            dataType: "json"
-        });
-
-        request.done(function (msg) {
-            $('.admin_page').html(msg);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert('Request failed: ' + textStatus);
-
-        });
-    
-
-    
-//    var date_now = new Date();
-//
-//    todayEvent(date_now);
-//-------------------------------------------------------------
-    $('.cal_table td').click(function (e) {
-        getEvent($(e.target).data('date'));
-    });
-//-------------------------------------------------------------
-    $('#feed_list button').click(function () {
-        var from_date = $('#first_date').val();
-        var to_date = $('#second_date').val();
-        var request = $.ajax({
-            method: "POST",
-            url: "feed.php",
-            data: {
-                date_from: from_date,
-                date_to: to_date
+                route: "addUsersAction",
+                name: n,
+                login: l,
+                age: a,
+                email: e
             },
             dataType: "json"
         });
@@ -44,60 +49,46 @@ $(function () {
         request.done(function (msg) {
 
             data = {
-                "events": msg
+                "last_user": msg
             };
-            template = "<div class=\"list\">{{#events}}<h1>Событие: {{event}}</h1><h2>{{title}}</h2><img src={{img}}><p>{{desc}}</p><hr>{{/events}}</div>";
+            template = "{{#last_user}}<tr><td>{{id_users}}</td><td>{{name}}</td><td>{{login}}</td><td>{{age}}</td><td>{{email}}</td><td><button>Edit</button><button>Del</button></td></tr>{{/last_user}}";
             result = Mustache.render(template, data);
-            
-            $('#day-calendar').html(result);
+            console.log(msg);
+            $('.users_table tr.add').before(result);
         });
+        
         request.fail(function (jqXHR, textStatus) {
             alert('Request failed: ' + textStatus);
-        });
-
-    });
-//-------------------------------------------------------------
-    function todayEvent(date) {
-        var dd = (date.getDate() < 10) ? '0' + date.getDate() : date.getDate();
-        var mm = ((date.getMonth() + 1) < 10) ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1);
-        var yyyy = date.getFullYear();
-        var dt = dd + '.' + mm + '.' + yyyy;
-
-        var request = $.ajax({
-            method: "POST",
-            url: "servicer.php",
-            data: {
-                id: dt
-            },
-            dataType: "json"
-        });
-
-        request.done(function (msg) {
-            $('#day-calendar').html(msg);
-        });
-        request.fail(function (jqXHR, textStatus) {
-            alert('Request failed: ' + textStatus);
-
         });
     }
-//-------------------------------------------------------------
-    function getEvent(dt) {
+    
+
+    function getUsers() {
         var request = $.ajax({
             method: "POST",
-            url: "servicer.php",
+            url: "../backend/controller/controller.php",
             data: {
-                id: dt
+                route: "adminAction"
             },
             dataType: "json"
         });
 
         request.done(function (msg) {
-            $('#day-calendar').html(msg);
+
+            data = {
+                "users_table": msg
+            };
+            template = "{{#users_table}}<tr><td>{{id_users}}</td><td>{{name}}</td><td>{{login}}</td><td>{{age}}</td><td>{{email}}</td><td><button>Edit</button><button>Del</button></td></tr>{{/users_table}}";
+            result = Mustache.render(template, data);
+            
+            $('.admin_page tr.th').after(result);
         });
+        
         request.fail(function (jqXHR, textStatus) {
             alert('Request failed: ' + textStatus);
         });
-    };
+    }
+    
 });
 
 

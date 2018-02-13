@@ -1,5 +1,9 @@
 <?php
 
+include '../model/model.php';
+include '../../core/databasehandler.php';
+include '../../core/config.php';
+
 class Controller {
     
     public function adminAction() {
@@ -7,41 +11,21 @@ class Controller {
         $res = $mdl->getUsers();
         echo json_encode($res);
     }
-}
-
-
-
-function getData($x) {
-    $x = $x . 'Action';
-    return (string) $x;
-}
-
-$str = getData($_POST['route_data']);
-echo var_dump($str), '<br>';
-$str();
-
-function adminAction() {
+    
+    public function addUsersAction() {
+        $n = $_POST['name'];
+        $l = $_POST['login'];
+        $a = $_POST['age'];
+        $e = $_POST['email'];
         $mdl = new Model();
-        $res = $mdl->getUsers();
+        $mdl->addUsers($n, $l, $a, $e);
+        
+        $res = $mdl->getLastUser();
         echo json_encode($res);
     }
+    
+}
 
-
-//$router = $_REQUEST['route_data'];
-/*$router = $_POST['route_data'];
-echo var_dump($router), '<br>';
-$router = $router . 'Action';
-echo var_dump($router), '<br>';*/
-//$router = 'adminAction';
-//$route = (string) $route;
-//$route = $route.'Action';
-//Controller::$router();
-//$ctr = new Controller();
-//$ctr->$str();
-//echo json_encode("$router()");
-//echo json_encode(gettype($route));
-
-//$func = "Controller::" . "$router";
-//$func();
-
-
+$route = $_POST['route'];
+(!empty($route))? Controller::$route() : null;
+//Controller::$route();
