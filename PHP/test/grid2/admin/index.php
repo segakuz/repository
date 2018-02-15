@@ -23,10 +23,10 @@
             </tr>
             <tr class="add">
                 <td>n</td>
-                <td><input type="text" id="name"></td>
-                <td><input type="text" id="login"></td>
-                <td><input type="number" id="age"></td>
-                <td><input type="email" id="email"></td>
+                <td><input type="text" id="name" required></td>
+                <td><input type="text" id="login" required></td>
+                <td><input type="number" id="age" required></td>
+                <td><input type="email" id="email" required></td>
                 <td><button>Add</button></td>
             </tr>
        </table>
