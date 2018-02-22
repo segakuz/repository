@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /*padding: 0;
+    margin: 0;*/
+}
+
+.books_table {
+    border-collapse: collapse;
+}
+
+.books_table td {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
