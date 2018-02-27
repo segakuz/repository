@@ -30,13 +30,8 @@
     padding: 3px 5px;
 }
 
-.users_table button:nth-child(odd):hover {
-    background: #57ff41;
-    text-decoration: underline;
-}
-
-.users_table button:nth-child(even):hover {
-    background: #ff8e8e;
+.users_table button:hover {
+    background: #41ff41;
     text-decoration: underline;
 }
 
