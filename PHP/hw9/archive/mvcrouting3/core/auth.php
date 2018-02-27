@@ -17,14 +17,7 @@ class UserModel {
         }*/
         
         $query = 'SELECT * FROM authorization WHERE login=:login AND password=:password';
-        
-        try {
-            $result = DatabaseHandler::GetRow($query, ['login'=>$login, 'password'=>$password]);
-        } catch (Exception $e) {
-            $app = new App();
-            $app->logger->log('Не отработал userModel->getUser' . $e->getMessage());
-        }
-        
+        $result = DatabaseHandler::GetRow($query, ['login'=>$login, 'password'=>$password]);
         if($result !== false) {
             return $result;
         } else {

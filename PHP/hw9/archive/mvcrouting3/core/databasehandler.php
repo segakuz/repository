@@ -18,9 +18,6 @@ class DatabaseHandler {
                 // Close the database handler and trigger an error
                 self::Close();
                 trigger_error($e->getMessage(), E_USER_ERROR);
-                
-                $app = new App();
-                $app->logger->log('db ' . $e->getMessage());
             }
         }
         // Return the database handler
@@ -47,9 +44,6 @@ class DatabaseHandler {
             // Close the database handler and trigger an error
             self::Close();
             trigger_error($e->getMessage(), E_USER_ERROR);
-            
-            $app = new App();
-            $app->logger->log('db ' . $e->getMessage());
         }
     }
 //---------------------------------------------------------------------------------------------------------------------
@@ -75,9 +69,6 @@ class DatabaseHandler {
             // Close the database handler and trigger an error
             self::Close();
             trigger_error($e->getMessage(), E_USER_ERROR);
-            
-            $app = new App();
-            $app->logger->log('db ' . $e->getMessage());
         }
         // Return the query results
         return $result;
@@ -102,9 +93,6 @@ class DatabaseHandler {
             // Close the database handler and trigger an error
             self::Close();
             trigger_error($e->getMessage(), E_USER_ERROR);
-            
-            $app = new App();
-            $app->logger->log('db ' . $e->getMessage());
         }
         // Return the query results
         return $result;
@@ -132,9 +120,6 @@ class DatabaseHandler {
             // Close the database handler and trigger an error
             self::Close();
             trigger_error($e->getMessage(), E_USER_ERROR);
-            
-            $app = new App();
-            $app->logger->log('db ' . $e->getMessage());
         }
         // Return the query results
         return $result;

@@ -1,19 +1,19 @@
 <?php
 
-class Input {
-    private $input;
+class Server {
+    private $server;
 
     function __construct() {
-        $this->input = array_merge($_GET, $_POST);
+        $this->server = $_SERVER;
     }
 
     function get($key) {
         //проверка установлен ли ключ isset() ? null;
-        $result = (isset($key))? $this->input[$key] : false;
+        $result = (isset($key))? $this->server[$key] : null;
         return $result;
     }
 
     function set($key, $value) {
-        $this->input[$key] = $value;
+        $this->server[$key] = $value;
     }
 }

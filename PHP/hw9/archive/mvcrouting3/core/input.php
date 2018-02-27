@@ -9,7 +9,7 @@ class Input {
 
     function get($key) {
         //проверка установлен ли ключ isset() ? null;
-        $result = (isset($key))? $this->input[$key] : false;
+        $result = (isset($key))? $this->input[$key] : null;
         return $result;
     }
 

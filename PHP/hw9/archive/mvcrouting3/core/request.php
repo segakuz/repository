@@ -5,7 +5,6 @@ class Request {
     public $server;
     public $session;
     public $auth;
-    public $registration;
     //public $databaseHandler;
 
     function __construct() {
@@ -13,7 +12,6 @@ class Request {
         $this->server = new Server();
         $this->session = new Session();
         $this->auth = new Auth();
-        $this->registration = new Registration();
         //$this->databaseHandler = new DatabaseHandler();
     }
 }

@@ -10,7 +10,6 @@ class App {
 
     function __construct() {
         $this->request = new Request();
-        $this->logger = new Logger('mvc', 'logs/logs.txt');
     }
     
     public static function run() {

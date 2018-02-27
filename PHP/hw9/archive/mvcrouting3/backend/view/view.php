@@ -27,9 +27,7 @@ class View {
             include( TEMPLATE_PATH.$this->template );
         } catch (Exception $e) {
         	// место где ошибка записывается в логер
-            $app = new App();
-            $app->logger->log($e->getMessage());
-        	//echo "файл не найден";
+        	echo "файл не найден";
         }
         $content = ob_get_contents();
         ob_end_clean();
