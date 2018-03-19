@@ -1,0 +1,3 @@
+guest~password
+user~user
+ssss~123
