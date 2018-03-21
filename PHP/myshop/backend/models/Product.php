@@ -195,6 +195,13 @@ class Product {
         // Возвращаем путь изображения-пустышки
         return $path . $noImage;
     }
+    
+    public static function getCount() {
+        $query = "SELECT COUNT(id_product) FROM products WHERE is_recommended = 1";
+        
+        $result = DatabaseHandler::GetOne($query);
+        return $result;
+    }
 
 }
 

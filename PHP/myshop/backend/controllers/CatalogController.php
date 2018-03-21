@@ -27,6 +27,7 @@ class CatalogController {
     public function categoryAction($categoryId, $page = 1) {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
+        $catname = Category::getCategoryById($categoryId);
 
         // Список товаров в категории
         $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
@@ -39,6 +40,7 @@ class CatalogController {
 
         // Подключаем вид
         $data = [
+            'catname'=>$catname,
             'categories'=>$categories,
             'categoryProducts'=>$categoryProducts,
             'pagination'=>$pagination

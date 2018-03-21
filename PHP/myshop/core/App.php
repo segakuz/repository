@@ -30,11 +30,12 @@ class App {
             if (preg_match("~$uriPattern~", $uri)) {
                 // Получаем внутренний путь из внешнего согласно правилу.
                 $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+                
                 // Определить контроллер, action, параметры
                 $segments = explode('/', $internalRoute);
                 $controllerName = array_shift($segments) . 'Controller';
                 $controllerName = ucfirst($controllerName);
-                $actionName = ucfirst(array_shift($segments)) . 'Action';
+                $actionName = array_shift($segments) . 'Action';
                 $parameters = $segments;
                 // Подключить файл класса-контроллера
                 $controllerFile = './backend/controllers/' . $controllerName . '.php';

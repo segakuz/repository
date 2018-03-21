@@ -4,7 +4,10 @@
 //модель для работы с пользователями
 
 class User {
-
+    
+    
+    
+    
     //Регистрация пользователя 
 //+
     public static function register($name, $email, $password) {

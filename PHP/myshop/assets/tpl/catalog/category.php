@@ -1,47 +1,46 @@
 <?php include './assets/tpl/layouts/header.php'; ?>
 
-    <div>
-        <h2>Каталог</h2>
-        <div>
-            <?php foreach ($categories as $category): ?>
-                <div>
-                    <h4>
-                        <a href="/category/<?= $category['id_category']; ?>"
-                           class="<?php if ($categoryId == $category['id_category']) echo 'active'; ?>"> <?= $category['name']; ?>
-                        </a>
-                    </h4>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
+<div class="catalog-cats">
+    <h2>Каталог</h2>
+    <?php foreach ($categories as $category): ?>
+    <a href="/category/<?= $category['id_category']; ?>" class="<?php if ($categoryId == $category['id_category']) echo 'active'; ?>">
+        <?= $category['name']; ?>
+    </a>
+    <?php endforeach; ?>
+</div>
 
 
 
-    <div>
-        <h2>Последние товары</h2>
-        <?php foreach ($categoryProducts as $product): ?>
-
-            <div>
-                <img src="<?= Product::getImage($product['id_product']); ?>" alt="" />
-                <h2>$<?= $product['price']; ?></h2>
-                <p>
-                    <a href="/product/<?= $product['id_product']; ?>">
-                        <?= $product['name']; ?>
-                    </a>
-                </p>
-                <a href="/basket/add/<?= $product['id_product']; ?>" data-id="<?= $product['id_product']; ?>">
+<div class="catalog-prods">
+    <h2><a href="/catalog/">Каталог</a> /
+        <?= $catname['name']; ?>
+    </h2>
+    <?php foreach ($categoryProducts as $product): ?>
+    <div class="product-item">
+        <p>
+            <a href="/product/<?= $product['id_product']; ?>">
+                <?= $product['name']; ?> <i class="fa fa-caret-right"></i>
+            </a>
+        </p>
+        <img class="img" src="<?= Product::getImage($product['id_product']); ?>" alt="" />
+        <br />
+        <p class="price">
+            <?= $product['price']; ?> р.
+        </p>
+        <a class="cart" href="/basket/add/<?= $product['id_product']; ?>" data-id="<?= $product['id_product']; ?>">
                     В корзину
-                </a>
-            </div>
-            <?php if ($product['is_new']): ?>
-                <img src="/template/images/home/new.png" class="new" alt="" />
-            <?php endif; ?>
-
-        <?php endforeach; ?>                              
+        </a>
+        <?php if ($product['is_new']): ?>
+        <img src="/assets/img/front-images/new.png" class="new" alt="" />
+        <?php endif; ?>
     </div>
-
+    <?php endforeach; ?>
+    <br />
     <!-- Постраничная навигация -->
     <?= $pagination->get(); ?>
+</div>
+
+
 
 
 
