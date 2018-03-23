@@ -39,9 +39,7 @@ class App {
                 $parameters = $segments;
                 // Подключить файл класса-контроллера
                 $controllerFile = './backend/controllers/' . $controllerName . '.php';
-//                if (file_exists($controllerFile)) {
-//                    include_once($controllerFile);
-//                }
+
                 // Создать объект, вызвать метод (т.е. action)
                 $controllerObject = new $controllerName;
                 

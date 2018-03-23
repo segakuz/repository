@@ -26,12 +26,12 @@
         <div id="bar">
             <a href="/basket/"><i class="fa fa-shopping-cart"></i><span> Корзина(<span id="cart-count"><?php echo Basket::countItems(); ?></span>)</span></a>
             <?php if (User::isGuest()): ?>
-            <a href="/user/register"><i class="fa fa-pencil-square-o"></i><span> Регистрация</span></a>
-            <a href="/user/login/"><i class="fa fa-sign-in"></i><span> Вход</span></a>
+            <a href="/user/register"><i class="fa fa-id-card"></i><span> Регистрация</span></a>
+            <a href="/user/login/"><i class="fa fa-sign-in-alt"></i><span> Вход</span></a>
             <?php else: ?>
 
-            <a href="/user/logout/"><i class="fa fa-sign-out"></i><span> Выход</span></a>
-            <a href="/cabinet/"><i class="fa fa-user-circle-o"></i><span> Кабинет</span></a>
+            <a href="/user/logout/"><i class="fa fa-sign-out-alt"></i><span> Выход</span></a>
+            <a href="/cabinet/"><i class="fa fa-user"></i><span> Кабинет</span></a>
             <span>Добрый день, Username!</span>
             <?php endif; ?>
         </div>

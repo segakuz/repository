@@ -2,18 +2,18 @@
 
 return [
     // Товар:
-    'product/([0-9]+)' => 'product/view/$1', // actionView в ProductController
+    'product/([0-9]+)' => 'product/view/$1', 
     // Каталог:
-    'catalog' => 'catalog/index', // actionIndex в CatalogController
+    'catalog' => 'catalog/index', 
     // Категория товаров:
-    'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2', // actionCategory в CatalogController   
-    'category/([0-9]+)' => 'catalog/category/$1', // actionCategory в CatalogController
+    'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2',  
+    'category/([0-9]+)' => 'catalog/category/$1', 
     // Корзина:
-    'basket/checkout' => 'basket/checkout', // actionAdd в CartController    
-    'basket/delete/([0-9]+)' => 'basket/delete/$1', // actionDelete в CartController    
-    'basket/add/([0-9]+)' => 'basket/add/$1', // actionAdd в CartController    
-    'basket/addAjax/([0-9]+)' => 'basket/addAjax/$1', // actionAddAjax в CartController
-    'basket' => 'basket/index', // actionIndex в CartController
+    'basket/checkout' => 'basket/checkout',    
+    'basket/delete/([0-9]+)' => 'basket/delete/$1',     
+    'basket/add/([0-9]+)' => 'basket/add/$1',     
+    'basket/addAjax/([0-9]+)' => 'basket/addAjax/$1', 
+    'basket' => 'basket/index', 
     // Пользователь:
     'user/register' => 'user/register',
     'user/login' => 'user/login',
@@ -41,6 +41,6 @@ return [
     'contacts' => 'site/contact',
     'about' => 'site/about',
     // Главная страница
-    'index.php' => 'site/index', // actionIndex в SiteController
-    '' => 'site/index', // actionIndex в SiteController
+    'index.php' => 'site/index',
+    '' => 'site/index',
 ];
