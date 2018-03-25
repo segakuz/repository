@@ -10,25 +10,24 @@
 </div>
 
 
-
 <div class="catalog-prods">
     <h2><a href="/catalog/">Каталог</a> /
-        <?= $catname['name']; ?>
+        <?= $catName['name']; ?>
     </h2>
     <?php foreach ($categoryProducts as $product): ?>
     <div class="product-item">
         <p>
-            <a href="/product/<?= $product['id_product']; ?>">
+            <a class="product-name" href="/product/<?= $product['id_product']; ?>">
                 <?= $product['name']; ?> <i class="fa fa-caret-right"></i>
             </a>
         </p>
         <img class="img" src="<?= Product::getImage($product['id_product']); ?>" alt="" />
         <br />
         <p class="price">
-            <?= $product['price']; ?> р.
+            <?= $product['price']; ?> &#8381;
         </p>
         <a class="cart" href="/basket/add/<?= $product['id_product']; ?>" data-id="<?= $product['id_product']; ?>">
-                    В корзину
+            В корзину
         </a>
         <?php if ($product['is_new']): ?>
         <img src="/assets/img/front-images/new.png" class="new" alt="" />
@@ -39,9 +38,5 @@
     <!-- Постраничная навигация -->
     <?= $pagination->get(); ?>
 </div>
-
-
-
-
 
 <?php include './assets/tpl/layouts/footer.php'; ?>

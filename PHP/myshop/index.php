@@ -6,28 +6,17 @@ include "./core/Dump.php";
 //ini_set('display_errors',1);
 //error_reporting(E_ALL);
 
-session_start();
+//В начале нашего скрипта пишем:
+set_error_handler('errHandler', E_ALL);
+function errHandler($errno, $errmsg, $filename, $linenum) {
+    if(stripos($errmsg, 'call_user_func_array') === false) {
+        $app = new App();
+        $app->logger->log("Ошибка № " . $errno . " ---Текст: " . $errmsg . " ---в файле: " . $filename . " ---строка: " .   $linenum . "\r\n--------------->>>---------------");
+    }
+}
 
-//App::run();
+session_start();
 
 $app = new App();
 $app->run();
 
-
-
-
-/*
-
-// FRONT CONTROLLER
-// Общие настройки
-ini_set('display_errors',1);
-error_reporting(E_ALL);
-session_start();
-// Подключение файлов системы
-define('ROOT', dirname(__FILE__));
-require_once(ROOT.'/components/Autoload.php');
-//Вызов Router
-$router = new Router();
-$router->run();
-
-*/

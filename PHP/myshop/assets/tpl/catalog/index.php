@@ -1,6 +1,5 @@
 <?php include './assets/tpl/layouts/header.php'; ?>
 
-
 <div class="catalog-cats">
     <h2>Каталог</h2>
 
@@ -12,12 +11,6 @@
 </div>
 
 
-
-
-
-
-
-
 <div class="catalog-prods">
     <h2>Последние товары</h2>
 
@@ -25,34 +18,23 @@
 
     <div class="product-item">
         <p>
-            <a href="/product/<?= $product['id_product'];?>">
+            <a class="product-name" href="/product/<?= $product['id_product'];?>">
                 <?= $product['name'];?> <i class="fa fa-caret-right"></i>
             </a>
         </p>
         <img class="img" src="<?= Product::getImage($product['id_product']); ?>" alt="">
         <br />
-        <p class="price"><?= $product['price'];?> p.</p>
-        <a class="cart" href="#" data-id="<?= $product['id_product'];?>">В корзину</a>
+        <p class="price"><?= $product['price'];?> &#8381;</p>
+        <a class="cart add-to-basket" href="#" data-id="<?= $product['id_product']; ?>">В корзину</a>
+        
         <?php if ($product['is_new']): ?>
         <img src="/assets/img/front-images/new.png" class="new" alt="" />
         <?php endif; ?>
 
     </div>
 
-
-
-
     <?php endforeach;?>
 
 </div>
-
-
-
-
-
-
-
-
-
 
 <?php include './assets/tpl/layouts/footer.php'; ?>

@@ -4,17 +4,13 @@
 class SiteController {
 
     //Action для главной страницы
-//+
     public function indexAction() {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
-
         // Список последних товаров
         $latestProducts = Product::getLatestProducts();
-
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();
-
         // Подключаем вид
         $data = [
             'categories'=>$categories,          
@@ -27,29 +23,23 @@ class SiteController {
     }
 
     //Action для страницы "Контакты"
-//+
     public function contactAction() {
-
         // Переменные для формы
-        //$userEmail = false;
-        //$userText = false;
+        $userEmail = false;
+        $userText = false;
         $result = false;
-
+        // Флаг ошибок
+        $errors = false;
         // Обработка формы
         if (isset($_POST['submit'])) {
             // Если форма отправлена 
             // Получаем данные из формы
             $userEmail = $_POST['userEmail'];
             $userText = $_POST['userText'];
-
-            // Флаг ошибок
-            $errors = false;
-
             // Валидация полей
             if (!User::checkEmail($userEmail)) {
                 $errors[] = 'Неправильный email';
             }
-
             if ($errors === false) {
                 // Если ошибок нет
                 // Отправляем письмо администратору 
@@ -60,7 +50,6 @@ class SiteController {
                 $result = true;
             }
         }
-
         // Подключаем вид
         $data = [
             'result'=>$result,
@@ -74,12 +63,10 @@ class SiteController {
     }
 
     //Action для страницы "О магазине"
-//+
     public function aboutAction() {
         // Подключаем вид
         $v = new View('site/about.php');
         $v->render();
         return true;
     }
-
 }

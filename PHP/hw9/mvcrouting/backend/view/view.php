@@ -19,8 +19,8 @@ class View {
     }
 
     //public function render(Array $data) {
-    public function render($data) {
-    	//extract($data);
+    public function render(...$data) {
+    	extract($data);
     	//echo "render";
         ob_start();
         try {

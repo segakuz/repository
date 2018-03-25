@@ -1,10 +1,9 @@
-<?php include './assets/tpl/layouts/header_adm.php'; ?>
+<?php include './assets/tpl/layouts/header.php'; ?>
 
-<div class="cabinet pb0">
-    <h2 id="breadcrumb"><a href="/admin">Админпанель</a> / <a href="/admin/order">Управление заказами</a> / Просмотр заказа</h2>
-</div>
-<div class="admin pad-50 pt0">
-    <h2 class="mgb">Просмотр заказа №
+
+<div class="cabinet">
+    <h2 id="breadcrumb" class="mgb">
+        <a href="/cabinet/">Кабинет</a> / <a href="/cabinet/order">Список заказов</a> / Заказ №
         <?= $order['id_order']; ?>
     </h2>
     <h3>Информация о заказе</h3>
@@ -34,14 +33,6 @@
                     <?= $order['user_comment']; ?>
                 </td>
             </tr>
-            <?php if ($order['id_user'] !== 0): ?>
-            <tr>
-                <td>ID клиента</td>
-                <td>
-                    <?= $order['id_user']; ?>
-                </td>
-            </tr>
-            <?php endif; ?>
             <tr>
                 <td><b>Статус заказа</b></td>
                 <td>
@@ -77,8 +68,8 @@
                 <td>
                     <?= $product['name']; ?>
                 </td>
-                <td>&#8381;
-                    <?= $product['price']; ?>
+                <td>
+                    <?= $product['price']; ?> &#8381;
                 </td>
                 <td>
                     <?= $productsQuantity[$product['id_product']]; ?>
@@ -90,8 +81,10 @@
     <h3 class="mgb">Сумма заказа:
         <?= $sum; ?> &#8381;
     </h3>
-    <a class="btn" href="/admin/order/update/<?= $order['id_order']; ?>"><i class="fa fa-edit"></i> Редактировать</a>
-    <a class="btn" href="/admin/order/">Назад к управлению заказами</a>
+    <a href="/cabinet/order"><i class="fa fa-eye"></i> Назад к просмотру заказов</a>
 </div>
+
+
+
 
 <?php include './assets/tpl/layouts/footer.php'; ?>

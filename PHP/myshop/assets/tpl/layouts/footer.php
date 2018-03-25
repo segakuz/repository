@@ -1,5 +1,5 @@
 <footer>
-    <div>
+    <div class="mgb30">
         <ul>
             <p class="mgb"><a href="/catalog/">Каталог <i class="fa fa-caret-right"></i></a></p>
 
@@ -15,16 +15,16 @@
 
         </ul>
     </div>
-    <div>
+    <div class="mgb30">
         <p class="mgb"><a href="/">Главная <i class="fa fa-caret-right"></i></a></p>
         <p class="mgb"><a href="/about/">О нас <i class="fa fa-caret-right"></i></a></p>
         <p class="mgb"><a href="/contacts/">Контакты <i class="fa fa-caret-right"></i></a></p>
         <br class="mgb" />
-        <div class="mgb"><a href="/basket/"><i class="fa fa-shopping-cart"></i> Корзина(<span id="cart-count"><?php echo Basket::countItems(); ?></span>) <i class="fa fa-caret-right"></i></a></div>
+        <div class="mgb"><a href="/basket/"><i class="fa fa-shopping-cart"></i> Корзина<!-- (<span id="basket-count"><?= Basket::countItems(); ?></span>)--> <i class="fa fa-caret-right"></i></a></div>
 
         <?php if (User::isGuest()): ?>
         <div class="mgb"><a href="/user/login/"><i class="fa fa-sign-in-alt"></i> Вход <i class="fa fa-caret-right"></i></a></div>
-        <div class="mgb"><a href="/user/register"><i class="fa fa-id-card"></i> Регистрация <i class="fa fa-caret-right"></i></a></div>
+        <div class="mgb"><a href="/user/register/"><i class="fa fa-id-card"></i> Регистрация <i class="fa fa-caret-right"></i></a></div>
         <?php else: ?>
         <div class="mgb"><a href="/cabinet/"><i class="fa fa-user"></i> Кабинет <i class="fa fa-caret-right"></i></a><br /></div>
         <div class="mgb"><a href="/user/logout/"><i class="fa fa-sign-out-alt"></i> Выход <i class="fa fa-caret-right"></i></a></div>

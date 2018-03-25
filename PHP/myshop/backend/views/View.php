@@ -10,7 +10,6 @@ class View {
     	$this->template = $tmpl;
     }
     
-    //public function render(Array $data) {
     public function render($data=['data'=>null]) {
     	extract($data);
         ob_start();

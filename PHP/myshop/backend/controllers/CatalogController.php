@@ -2,11 +2,9 @@
 
 //Контроллер CatalogController
 //Каталог товаров
-
 class CatalogController {
 
     //Action для страницы "Каталог товаров"
-//+
     public function indexAction() {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
@@ -23,24 +21,21 @@ class CatalogController {
     }
 
     //Action для страницы "Категория товаров"
-//+
     public function categoryAction($categoryId, $page = 1) {
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
-        $catname = Category::getCategoryById($categoryId);
-
+        //название категории
+        $catName = Category::getCategoryById($categoryId);
         // Список товаров в категории
         $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
-
         // Общее количетсво товаров (необходимо для постраничной навигации)
         $total = Product::getTotalProductsInCategory($categoryId);
-
         // Создаем объект Pagination - постраничная навигация
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
-
         // Подключаем вид
         $data = [
-            'catname'=>$catname,
+            'catName'=>$catName,
+            'categoryId'=>$categoryId,
             'categories'=>$categories,
             'categoryProducts'=>$categoryProducts,
             'pagination'=>$pagination
@@ -49,5 +44,4 @@ class CatalogController {
         $v->render($data);
         return true;
     }
-
 }

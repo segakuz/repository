@@ -1,3 +1,2 @@
-guest~password
-user~user
-ssss~123
+a@a.a ~ aaaaaa
+t@t.t ~ tttttt

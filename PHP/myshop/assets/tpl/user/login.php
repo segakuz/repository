@@ -1,18 +1,18 @@
 <?php include './assets/tpl/layouts/header.php'; ?>
 
 <div class="login">
-    <h2>Вход на сайт</h2>
+    <h2>Войдите на сайт</h2>
+    <p>или</p>
+    <a href="/user/register"><i class="fa fa-id-card"></i><span> Зарегистрируйтесь</span></a>
     <div class="container">
+       
         <?php if (isset($errors) && is_array($errors)): ?>
         <ul>
             <?php foreach ($errors as $error): ?>
-            <li> -
-                <?= $error; ?>
-            </li>
+            <li><i class="fa fa-exclamation-triangle"></i> <?= $error; ?></li>
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-
 
         <form action="#" method="post">
             <div class="row">
@@ -36,10 +36,6 @@
             </div>
         </form>
     </div>
-
-    <br/>
-    <br/>
-    <a href="/user/register">Регистрация</a>
 </div>
 
 

@@ -11,7 +11,7 @@ class DatabaseHandler {
         if (!isset(self::$_mHandler)) {
             try {
                 // Create a new PDO class instance
-                self::$_mHandler = 	new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD, array(PDO::ATTR_PERSISTENT => DB_PERSISTENCY));
+                self::$_mHandler = 	new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD, array(PDO::ATTR_PERSISTENT));
                 // Configure PDO to throw exceptions
                 self::$_mHandler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e){ 
