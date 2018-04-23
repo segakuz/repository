@@ -61,7 +61,7 @@ CREATE TABLE `products` (
   `price` float NOT NULL,
   `is_available` int(11) NOT NULL,
   `brand` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL,
+  `image` varchar(255) NULL,
   `description` text NOT NULL,
   `is_new` int(11) NOT NULL DEFAULT '0',
   `is_recommended` int(11) NOT NULL DEFAULT '0',
