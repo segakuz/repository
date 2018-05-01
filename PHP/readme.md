@@ -9,18 +9,19 @@
 •	-Работа выполнена самостоятельно на нативном PHP. 
 •	-При выполнении работы применены знания ООП и архитектуры MVC.
 
-hw5/calendar - 
+**[hw5/calendar](https://github.com/segakuz/repository/edit/master/PHP/hw5/calendar)** - 
 прототип календаря исторических событий. События загружены только на декабрь. Есть лента событий и детальный просмотр события. Реализовано при помощи AJAX.
 
-hw6/doorway - 
+**[hw6/doorway](https://github.com/segakuz/repository/edit/master/PHP/hw6/doorway)** - 
 прототип сайта типа doorway. Из админки можно создавать множество страниц в разных директориях. Страницы автоматически выводятся в меню.
 
-hw9/mvcrouting - 
+**[hw9/mvcrouting](https://github.com/segakuz/repository/edit/master/PHP/hw9/mvcrouting)** - 
 прототип простой CMS для управления текстами на сайте. Реализована админка с функциями добавления, редактирования и удаления текстов.
 
 hw10/grid - 
+**[hw10/grid](https://github.com/segakuz/repository/edit/master/PHP/hw10/grid)** - 
 таблица для работы с динамической информацией о пользователях, подгружаемой из БД. Выполнено при помощи AJAX.
 
-hw11/library - 
+**[hw11/library](https://github.com/segakuz/repository/edit/master/PHP/hw11/library)** - 
 прототип работы с домашней библиотекой.
 
