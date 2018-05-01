@@ -1,7 +1,6 @@
 В этой директории проекты на PHP & MySQL. В проектах, обозначенных в списке, имеются папки со скриншотами.
 
-[myshop](https://github.com/segakuz/repository/edit/master/PHP/myshop)
-myshop - 
+[myshop](https://github.com/segakuz/repository/edit/master/PHP/myshop) - 
 проект простого интернет-магазина по продаже велопродукции. 
 •	-Реализована система роутинга и ЧПУ. -Системные ошибки сохраняются в логе. 
 •	-Реализован простой фреймворк для обращения вида: $app->request->auth->init($login, $psw); 
