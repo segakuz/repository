@@ -131,6 +131,7 @@
         function backSpace() {
             word.value = word.value.slice(0, word.value.length - 1);
         }
+        
         for (i = 0; i < letters.length - 1; i++) {
             letters[i].addEventListener("click", function() {
                 addLetter(this);
