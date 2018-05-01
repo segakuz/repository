@@ -4,7 +4,7 @@
 В директории PHP кроме описания есть скриншоты выполненных работ.
 
 Относительно крупные проекты:
-* **[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myshop)** - 
+* **[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myShop%20-%20COOLBIKES)** - 
 **Интернет-магазин** для реализации велопродукции
 
 
