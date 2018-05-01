@@ -4,8 +4,10 @@
 В директории PHP кроме описания есть скриншоты выполненных работ.
 
 Относительно крупные проекты:
-* **Интернет-магазин** для реализации велопродукции - 
-**[myshop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myshop)**
+* **[myshop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myshop)** - 
+**Интернет-магазин** для реализации велопродукции
 
-* **Игра** на ***javascript*** - 
-**[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/tree/master/JS/myGame%20-%20THE%20HEADSHOOTER)**
+
+* **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/tree/master/JS/myGame%20-%20THE%20HEADSHOOTER)** - 
+**Игра** на ***javascript***
+
