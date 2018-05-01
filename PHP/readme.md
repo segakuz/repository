@@ -18,7 +18,6 @@
 **[hw9/mvcrouting](https://github.com/segakuz/repository/edit/master/PHP/hw9/mvcrouting)** - 
 прототип простой CMS для управления текстами на сайте. Реализована админка с функциями добавления, редактирования и удаления текстов.
 
-hw10/grid - 
 **[hw10/grid](https://github.com/segakuz/repository/edit/master/PHP/hw10/grid)** - 
 таблица для работы с динамической информацией о пользователях, подгружаемой из БД. Выполнено при помощи AJAX.
 
