@@ -3,7 +3,7 @@
 В каждой директории есть описание в файле readme. 
 В директории PHP кроме описания есть скриншоты выполненных работ.
 
-Относительно крупные проекты:
+Содержание:
 * **[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myShop%20-%20COOLBIKES)** - 
 **Интернет-магазин** для реализации велопродукции
 
@@ -11,3 +11,8 @@
 * **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/tree/master/JS/myGame%20-%20THE%20HEADSHOOTER)** - 
 **Игра** на ***javascript***
 
+* **[PHP](https://github.com/segakuz/repository/tree/master/PHP)** - 
+выполненные мной задания на знание PHP
+
+* **[JS](https://github.com/segakuz/repository/tree/master/JS)** - 
+выполненные мной логические и практические задания на знаниеJavascript
