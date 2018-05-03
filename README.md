@@ -9,10 +9,10 @@
 
 
 * **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/tree/master/JS/myGame%20-%20THE%20HEADSHOOTER)** - 
-**Игра** на ***javascript***
+**Игра** на ***JavaScript***
 
 * **[PHP](https://github.com/segakuz/repository/tree/master/PHP)** - 
-выполненные мной задания на знание PHP
+выполненные мной задания на знание ***PHP***
 
 * **[JS](https://github.com/segakuz/repository/tree/master/JS)** - 
-выполненные мной логические и практические задания на знаниеJavascript
+выполненные мной логические и практические задания на знание ***JavaScript***
