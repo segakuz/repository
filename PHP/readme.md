@@ -1,6 +1,8 @@
+# PHP
+
 В этой директории проекты на **PHP & MySQL**. В обозначенных проектах имеются папки со скриншотами.
 
-**[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myShop%20-%20COOLBIKES)** - 
+**[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myShop%20-%20COOLBIKES#myshop---coolbikes)** - 
 проект простого интернет-магазина по продаже велопродукции. 
 *	Реализована система роутинга и ЧПУ. 
 *   Системные ошибки сохраняются в логе. 
