@@ -8,7 +8,7 @@
 **Интернет-магазин** для реализации велопродукции
 
 
-* **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/blob/master/JS/myGame%20-%20THE%20HEADSHOOTER#mygame---the-headshooter)** - 
+* **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/tree/master/JS/myGame%20-%20THE%20HEADSHOOTER#mygame---the-headshooter)** - 
 **Игра** на ***JavaScript***
 
 * **[PHP](https://github.com/segakuz/repository/tree/master/PHP#php)** - 
