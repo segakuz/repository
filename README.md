@@ -4,7 +4,7 @@
 В директории PHP кроме описания есть скриншоты выполненных работ.
 
 Содержание:
-* **[myShop - COOLBIKES](https://github.com/segakuz/repository/tree/master/PHP/myShop%20-%20COOLBIKES)** - 
+* **[myShop - COOLBIKES](https://github.com/segakuz/repository/blob/master/PHP/myShop%20-%20COOLBIKES/readme.md#myshop---coolbikes)** - 
 **Интернет-магазин** для реализации велопродукции
 
 
