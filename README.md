@@ -11,8 +11,8 @@
 * **[myGame - THE HEADSHOOTER](https://github.com/segakuz/repository/blob/master/JS/myGame%20-%20THE%20HEADSHOOTER#mygame---the-headshooter)** - 
 **Игра** на ***JavaScript***
 
-* **[PHP](https://github.com/segakuz/repository/tree/master/PHP#PHP)** - 
+* **[PHP](https://github.com/segakuz/repository/tree/master/PHP#php)** - 
 выполненные мной задания на знание ***PHP***
 
-* **[JS](https://github.com/segakuz/repository/tree/master/JS#JS)** - 
+* **[JS](https://github.com/segakuz/repository/tree/master/JS#js)** - 
 выполненные мной логические и практические задания на знание ***JavaScript***
